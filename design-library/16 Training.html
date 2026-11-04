@@ -2705,8 +2705,8 @@ section.tr-hero .wrap>.split{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr
 section.tr-hero h1{font-size:clamp(38px,3.4vw,52px)!important;line-height:1.14!important;letter-spacing:-.025em!important;font-weight:600!important;margin:24px 0!important}
 section.tr-hero .tr-vis{position:relative!important;display:block!important;overflow:visible!important;margin:0!important;padding:0!important}
 section.tr-hero .tr-vis::before{content:"";position:absolute;z-index:0;inset:-12% -6% -12% 4%;background:radial-gradient(closest-side,rgba(81,143,250,.34),rgba(81,143,250,.12) 55%,transparent 80%);filter:blur(26px);pointer-events:none}
-section.tr-hero .training-hero-frame{position:relative;z-index:1;width:calc(100% + 24px)!important;max-width:none!important;margin:0 0 0 12px!important;transform:perspective(2400px) rotateY(-14deg) rotateX(6deg) rotateZ(1deg)!important;transform-origin:center!important;box-shadow:0 30px 60px -24px rgba(21,20,51,.4)!important}
-@media(max-width:960px){section.tr-hero .training-hero-frame{width:100%!important;margin:0!important}section.tr-hero{padding:40px 0!important}section.tr-hero .wrap>.split{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}section.tr-hero .tr-vis::before{inset:-8% 0}section.tr-hero .training-hero-frame{transform:perspective(1800px) rotateY(-6deg) rotateX(3deg)!important}}
+section.tr-hero .training-hero-frame{position:relative;z-index:1;width:min(741px,calc(45.5vw + 73px))!important;scale:.9;max-width:none!important;margin:0!important;transform:perspective(2400px) rotateY(-14deg) rotateX(6deg) rotateZ(1deg)!important;transform-origin:center!important;box-shadow:0 30px 60px -24px rgba(21,20,51,.4)!important}
+@media(max-width:960px){section.tr-hero .training-hero-frame{width:100%!important;margin:0!important;scale:1}section.tr-hero{padding:40px 0!important}section.tr-hero .wrap>.split{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}section.tr-hero .tr-vis::before{inset:-8% 0}section.tr-hero .training-hero-frame{transform:perspective(1800px) rotateY(-6deg) rotateX(3deg)!important}}
 @media(prefers-reduced-motion:reduce){section.tr-hero .training-hero-frame{transition:none}}
 </style><link rel="stylesheet" href="../assets/nav/site-nav.css">
 <style id="tr-hero-shell">
@@ -2731,7 +2731,7 @@ section.tr-hero .eyebrow{display:inline-flex!important;align-items:center;backgr
 <p>Turn your own policies, documents and expertise into short, interactive courses built around real-life scenarios.</p>
 <div class="ctas"><a class="btn btn-primary" href="#demo">Book a demo</a><a class="btn btn-navy" href="#how">See RuleProof in action</a></div>
 </div>
-<div class="tr-vis rp-training-visual"><div class="training-hero-frame"><img alt="RuleProof Training Pipeline showing approved sources and recent pipelines" decoding="async" loading="eager" src="training-pipeline-hero.png"/></div></div>
+<div class="tr-vis rp-training-visual"><div class="training-hero-frame"><img alt="RuleProof Training Pipeline showing approved sources and recent pipelines" decoding="async" loading="eager" src="training-pipeline-hero-v2.png"/></div></div>
 </div>
 </div>
 </section></div></div>
