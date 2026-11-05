@@ -2952,19 +2952,44 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <p class="roi-note">Estimates are illustrative and based on the information you provide. Example figures are for illustration only.</p>
 </div>
 </section>
-<!-- 11 TEAMS · 3 cards with role band -->
-<section class="alt teams" data-n="11">
-<div class="wrap">
-<div class="head solo"><h2 class="h2">Made for the teams who own the learning</h2></div>
-<div class="grid-3">
-<div class="card"><div class="band"><h3>L&amp;D &amp; People</h3></div><p>Onboarding, upskilling and role-based development for every team and level.</p></div>
-<div class="card"><div class="band"><h3>Compliance &amp; GRC</h3></div><p>Turn policies, requirements and controls into practical training, with the records behind your programme.</p></div>
-<div class="card"><div class="band"><h3>Risk &amp; Security</h3></div><p>Train people on the controls and decisions in their role, and spot knowledge gaps.</p></div>
-</div>
-</div>
-</section>
 <!-- 14 FINAL CTA -->
-<section aria-labelledby="tr-testimonials-title" class="tr-testimonials"><div class="wrap"><div class="head"><span class="tr-testimonials-kicker">From the people using RuleProof</span><h2 class="h2" id="tr-testimonials-title">Learning that works in real life</h2></div><div class="tr-testimonials-grid"><figure><blockquote>“We'd have a massive last-minute push to finish training before every audit. This time, lessons were short, the scenarios felt familiar, and everyone finished on time.”</blockquote><figcaption><strong>Rami Khoury</strong><span>Head of Compliance · Dubai</span></figcaption></figure><figure><blockquote>“I expected implementation to take months, like other platforms we'd used. It was faster and easier than I thought. Training is assigned automatically by role, and I can see who's cruising through and who needs help. I can step in whenever someone needs me.”</blockquote><figcaption><strong>Laura Peters</strong><span>Training Manager · New York</span></figcaption></figure><figure><blockquote>“I finished it in ten minutes, waiting in my car before another viewing. It was quick, without feeling like I was clicking next just to get it over with.”</blockquote><figcaption><strong>Jake Hollis</strong><span>Real estate agent · San Diego</span></figcaption></figure></div></div></section><section class="cta cta-blue" data-n="14" id="demo">
+<style id="tr-voices-css">
+  .voices { padding: var(--sec) 0; background: #fff; position: relative; }
+  .cvm { margin: 0; display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 18px; background: #fff; border: 1px solid var(--line); box-shadow: 0 20px 40px -32px rgba(21,20,51,.35); transition: transform .3s var(--ease); }
+  .cvm:hover { transform: translateY(-3px); }
+  .cvm blockquote { margin: 0; flex: 1; font-size: 16px; line-height: 1.5; color: var(--ink); }
+  .cvm figcaption { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-3); }
+  .cvm-av { width: 36px; height: 36px; flex: 0 0 36px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 600; }
+  .cvm-av.a1 { background: #E6EEFF; color: #3450F0; } .cvm-av.a2 { background: #151433; color: #fff; } .cvm-av.a3 { background: #DCE5FF; color: #2233B8; } .cvm-av.a4 { background: #EEF2FF; color: #151433; }
+  .cvm-av { width: 40px; height: 40px; flex-basis: 40px; border-radius: 11px; overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
+  .cvm-av img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vf-bleed { position: relative; margin: 0; border-radius: 24px; overflow: hidden; min-height: 520px; display: flex; align-items: flex-end; box-shadow: 0 40px 70px -36px rgba(21,20,51,.6); }
+  .vf-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform 1.2s var(--ease); }
+  .vf-bleed:hover .vf-bg { transform: scale(1.04); }
+  .vf-bleed::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,12,38,0) 20%, rgba(11,12,38,.75) 55%, #0B0C26 85%); }
+  .vf-lg { position: absolute; top: 20px; left: 20px; z-index: 2; }
+  .vf-in { position: relative; z-index: 2; padding: 32px; display: grid; gap: 18px; }
+  .vf-in blockquote { margin: 0; font-size: 21px; line-height: 1.45; color: #fff; }
+  .vf-in figcaption, .vf-wq figcaption { font-size: 14px; color: rgba(255,255,255,.7); } .vf-in figcaption b, .vf-wq figcaption b { display: block; color: #fff; font-size: 16px; font-weight: 600; }
+  .cvm figcaption { display: block; } .cvm figcaption b { display: block; color: var(--ink); font-size: 14.5px; font-weight: 600; margin-bottom: 1px; }
+  .cvm figcaption { display: flex; align-items: center; gap: 10px; } .cvm-av { border-radius: 50% !important; box-shadow: none !important; }
+  .cvm blockquote p + p { margin-top: 10px; } .cvm blockquote p { margin: 0; }
+  .vf-rank { display: block; margin-top: 4px; font-size: 13px; color: #C7D3FF; }
+  .voices .head.solo { text-align: center; margin-left: auto; margin-right: auto; }
+  .vc-bar { display: flex; justify-content: center; gap: 8px; margin-top: 12px; margin-bottom: 0; }
+  .vc-bar button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--navy-800); font-size: 18px; cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+  .vc-bar button:hover { background: var(--navy-800); color: #fff; border-color: var(--navy-800); }
+  .vc-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 2px 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .vc-track::-webkit-scrollbar { display: none; }
+  .vc-track > * { flex: 0 0 min(360px, 86%); scroll-snap-align: start; margin: 0; }
+  .vc-track > .vf-bleed { flex-basis: min(420px, 90%); min-height: 460px; }
+  .vc-track .vf-in figcaption, .vs .vf-in figcaption { display: block !important; }
+.voices.tr-voices{background:#fff}
+</style>
+<section class="voices tr-voices">
+<div class="wrap">
+<div class="head solo"><h2 class="h2">Hear from our clients themselves</h2></div>
+<div class="vcar"><div class="vc-track"><figure class="vf-bleed"><img alt="Mohammed Mousa Shanaah" class="vf-bg" src="../assets/about/mohammed-mousa-shanaah-hd.jpg"/><div class="vf-in"><blockquote>“Our collaboration is set to elevate how professionals learn and grow. The future of professional education starts here.”</blockquote><figcaption><b>Mohammed Mousa Shanaah</b>CEO, Innovation Experts Real Estate Institute<span class="vf-rank">#1 real estate institute in Dubai</span></figcaption></div></figure><figure class="cvm"><blockquote><p>“We'd have a massive last-minute push to finish training before every audit. This time, lessons were short, the scenarios felt familiar, and everyone finished on time.”</p></blockquote><figcaption><span class="cvm-av a3">RK</span><span><b>Rami Khoury</b>Head of Compliance · Dubai</span></figcaption></figure><figure class="cvm"><blockquote><p>“I expected implementation to take months, like other platforms we'd used. It was faster and easier than I thought. Training is assigned automatically by role, and I can see who's cruising through and who needs help. I can step in whenever someone needs me.”</p></blockquote><figcaption><span class="cvm-av a4">LP</span><span><b>Laura Peters</b>Training Manager · New York</span></figcaption></figure><figure class="cvm"><blockquote><p>“Onboarding used to mean Google Docs, calls and asking whoever was next to you. Now everyone has a clear path from day one. I actually enjoy onboarding now.”</p></blockquote><figcaption><span class="cvm-av a2">AS</span><span><b>Amira Saleh</b>Head of Operations · Dubai</span></figcaption></figure><figure class="cvm"><blockquote><p>“I finished it in ten minutes, waiting in my car before another viewing. It was quick, without feeling like I was clicking next just to get it over with.”</p></blockquote><figcaption><span class="cvm-av a1">JH</span><span><b>Jake Hollis</b>Real estate agent · San Diego</span></figcaption></figure></div><div class="vc-bar"><button aria-label="Previous review" data-vc="-1" type="button">←</button><button aria-label="Next review" data-vc="1" type="button">→</button></div></div></div></section><script>document.querySelectorAll(".tr-voices .vc-bar button[data-vc]").forEach(function(b){b.addEventListener("click",function(){var t=document.querySelector(".tr-voices .vc-track");t.scrollBy({left:+b.dataset.vc*t.clientWidth*.8,behavior:"smooth"});});});</script><section class="cta cta-blue" data-n="14" id="demo">
 <div class="wrap split">
 <div>
 <h2 class="h2" style="margin-bottom:24px">See your content turned into learning</h2>
