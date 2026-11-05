@@ -2963,7 +2963,7 @@ section#tiers{padding-bottom:24px!important}section#frameworks{padding-top:48px!
 </div>
 </div></section>
 <!-- 4 WORKS WITH ANY FRAMEWORK -->
-<section id="frameworks"><div class="pf20-bg" aria-hidden="true"></div><div class="wrap pf20">
+<section id="frameworks"><div class="wrap pf20">
 <div class="pf20-l pfr">
 <h2 class="h2">Made for enterprise GRC and regulated teams</h2>
 <h3 class="pf20-h3">Works with any framework</h3>
@@ -2976,10 +2976,30 @@ section#tiers{padding-bottom:24px!important}section#frameworks{padding-top:48px!
 <article class="pf20-c" data-p="2"><div class="pf20-hd"><b>Controls from this policy</b><span>Owners assigned, ready for testing</span></div><ol class="k"><li>Maintain a register of ICT third parties<em>IT Risk Manager</em></li><li>Quarterly concentration risk review<em>Head of Compliance</em></li><li>Exit plan for each critical service<em>Operations Lead</em></li></ol><div class="pf20-ft"><span>Link evidence</span><span class="p">Schedule testing</span></div></article>
 </div>
 </div></section>
+<!-- shared product-window styles (used by handoff trail) -->
+<style>
+.pf8x{position:relative;height:470px;border-radius:24px;overflow:hidden;background:radial-gradient(ellipse 60% 70% at 92% 0%,rgba(80,104,255,.42),transparent 70%),linear-gradient(135deg,#151433,#0B0C26);border:1px solid rgba(157,180,255,.18);box-shadow:0 2px 6px rgba(21,20,51,.18),0 24px 48px -18px rgba(21,20,51,.45),0 60px 90px -40px rgba(21,20,51,.5)}
+.pf8x:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:screen;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .3 0 0 0 0 .8 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#frameworks,#context,#tiers{position:relative}#frameworks:before,#context:before,#tiers:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .3 0 0 0 0 .8 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}#frameworks>.wrap,#context>.wrap,#tiers>.wrap{position:relative;z-index:1}
+.pf8x-win{position:absolute;left:44px;top:44px;bottom:0;width:calc(100% - 128px);padding:26px 26px 0;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.pf8x-h{display:flex;align-items:center;gap:8px;font-size:16px;color:var(--ink)}.pf8x-h svg{width:18px;height:18px;fill:var(--blue);stroke:var(--blue);stroke-width:1;stroke-linejoin:round}
+.pf8x-sub{margin:4px 0 14px 26px;font-size:13px;color:var(--ink-3)}
+.pf8x ol{margin:0;padding:0 0 0 22px;font-size:15px;line-height:1.45;color:var(--ink-2)}.pf8x li{padding:8px 0 8px 4px;border-top:1px solid var(--line);padding-right:190px}.pf8x li:first-child{border-top:0}
+.pf8x-btns{position:absolute;right:26px;bottom:20px;display:flex;gap:8px;font-size:14px;font-weight:600}
+.pf8x-btns span{padding:8px 14px;border-radius:8px;border:1px solid var(--line);color:var(--ink)}.pf8x-btns .p{background:var(--blue);border-color:var(--blue);color:#fff}
+.pf8x-fl{position:absolute;right:24px;top:170px;display:flex;flex-direction:column;gap:10px;align-items:stretch;width:176px}
+.pf8x-chip{display:flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;background:#fff;color:var(--blue);font-size:17px;font-weight:600;box-shadow:0 18px 36px -16px rgba(0,0,0,.55)}.pf8x-chip svg{width:18px;height:18px;fill:var(--blue);stroke:var(--blue);stroke-width:1;stroke-linejoin:round}
+.pf8x-menu{display:flex;flex-direction:column;gap:2px;padding:10px;border-radius:14px;background:#fff;font-size:15px;color:var(--ink);box-shadow:0 18px 36px -16px rgba(0,0,0,.55)}.pf8x-menu span{padding:9px 12px;border-radius:8px}
+.pf8x li,.pf8x-fl>*{opacity:0;transform:translateY(8px);transition:opacity .35s var(--pf-out),transform .35s var(--pf-out)}
+.in.pf8x li,.in .pf8x li,.pf8x.in .pf8x-fl>*{opacity:1;transform:none}.pf8x li{transition-delay:calc(var(--k)*90ms + .2s)}.pf8x-fl>:nth-child(1){transition-delay:.6s}.pf8x-fl>:nth-child(2){transition-delay:.72s}
+@media(hover:hover) and (pointer:fine){.pf8x-menu span:hover{background:#EEF2FF;color:var(--blue)}}
+@media(max-width:960px){.pf8x{height:440px}.pf8x-win{left:20px;top:20px;width:calc(100% - 40px)}.pf8x li{padding-right:0}.pf8x-fl{right:12px;top:auto;bottom:70px;width:160px}}
+@media(prefers-reduced-motion:reduce){.pf8x li,.pf8x-fl>*{opacity:1;transform:none;transition:none}}
+</style>
 <style id="proof-v20">
 section#frameworks{position:relative;overflow:hidden;padding:96px 0!important;background:#fff!important}
 section#frameworks:before{display:none!important}
-.pf20-bg{position:absolute;left:0;top:0;bottom:0;width:54%;background:#E9EFFF;border-right:1px solid rgba(52,80,240,.1)}
+section#frameworks:after{content:"";position:absolute;width:760px;height:560px;right:-180px;top:50%;margin-top:-280px;border-radius:50%;background:radial-gradient(closest-side,rgba(150,168,245,.3),rgba(190,203,250,.14) 55%,transparent);pointer-events:none;z-index:0}
 .pf20{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center;max-width:1188px}
 .pf20-l .h2{margin:0 0 28px;text-align:left!important;font-size:clamp(30px,3vw,42px)}
 .pf20-h3{margin:0 0 12px;font-size:20px;font-weight:600;color:var(--ink)}
@@ -3007,7 +3027,7 @@ section#frameworks:before{display:none!important}
 .pf20-ft{margin-top:auto;padding-top:18px;display:flex;justify-content:flex-end;gap:8px}
 .pf20-ft span{padding:9px 16px;border-radius:8px;border:1px solid #DCE3F5;font-size:13px;font-weight:600;color:var(--ink)}
 .pf20-ft .p{background:#3450F0;border-color:#3450F0;color:#fff}
-@media(max-width:960px){.pf20-bg{width:100%;height:46%;bottom:auto;border-right:0}.pf20{grid-template-columns:1fr;gap:40px}.pf20-deck{margin-right:0;height:400px}.pf20-c[data-p="1"]{transform:translate(18px,-18px) scale(.95)}.pf20-c[data-p="2"]{transform:translate(36px,-36px) scale(.9)}}
+@media(max-width:960px){.pf20{grid-template-columns:1fr;gap:40px}.pf20-deck{margin-right:0;height:400px}.pf20-c[data-p="1"]{transform:translate(18px,-18px) scale(.95)}.pf20-c[data-p="2"]{transform:translate(36px,-36px) scale(.9)}}
 @media(prefers-reduced-motion:reduce){.pf20-c,.pf20-c>*{transition:none}}
 </style>
 <script>(function(){var root=document.querySelector('.pf20');if(!root)return;var cs=[].slice.call(root.querySelectorAll('.pf20-c')),tb=[].slice.call(root.querySelectorAll('.pf20-tabs button')),cur=0,t=null,done=false;var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;function show(i){cur=i;cs.forEach(function(c,k){c.setAttribute('data-p',(k-i+3)%3)});tb.forEach(function(b,k){b.setAttribute('aria-selected',k===i)})}tb.forEach(function(b,k){b.addEventListener('click',function(){done=true;clearInterval(t);show(k)})});if(!reduce&&'IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){clearInterval(t);if(e.isIntersecting&&!done){t=setInterval(function(){show((cur+1)%3)},4500)}})},{threshold:.5}).observe(root)}})();</script>
