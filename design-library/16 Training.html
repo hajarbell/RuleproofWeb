@@ -2742,22 +2742,6 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 .ux-train .tp-subs{display:flex;flex-direction:column;gap:.2cqi;margin:-.4cqi 0 1cqi}.ux-train .tp-sub{display:flex;align-items:center;justify-content:space-between;padding:.75cqi .7cqi .75cqi 1.6cqi;font-size:1.1cqi;line-height:1.25;color:#4A4D6E;border-radius:.5cqi}.ux-train .tp-sub.on{background:#E6EDFF;color:#151433;font-weight:600}.ux-train .tp-sub em{font-style:normal;font-size:.75cqi;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8A8DAA;background:#F1F4FB;border-radius:2cqi;padding:.15cqi .6cqi}.ux-train .tp-lab2{margin-top:1.1cqi}.ux-train .tp-opts{display:grid;grid-template-columns:1fr 1fr;gap:.8cqi}.ux-train .tp-opt{display:flex;gap:.8cqi;align-items:flex-start;padding:.9cqi;border:1px solid #E3E8F5;border-radius:.7cqi;background:#fff}.ux-train .tp-opt.on{background:#E8EEFF;border-color:#151433}.ux-train .tp-opt i{flex:0 0 1.3cqi;width:1.3cqi;height:1.3cqi;margin-top:.1cqi;border:1px solid #8A8DAA;border-radius:50%;background:#fff;position:relative}.ux-train .tp-opt.on i{border-color:#151433}.ux-train .tp-opt.on i::after{content:"";position:absolute;inset:.25cqi;border-radius:50%;background:#151433}.ux-train .tp-opt b{display:block;font-size:1.2cqi;font-weight:600;color:#151433;line-height:1.25}.ux-train .tp-opt small{display:block;font-size:.95cqi;color:#6B6F8E;margin-top:.2cqi;line-height:1.3}
 .ux-train .tp-extra{display:none}.ux-train.tp-more .tp-extra{display:block}.ux-train .tp-opts.tp3{grid-template-columns:repeat(3,1fr)}
 </style>
-<style id="tr-help-side">
-@media(min-width:961px){
-#help .hv-split{display:grid;grid-template-columns:minmax(250px,.58fr) minmax(0,2fr);gap:32px;align-items:start}
-#help .rail{flex-direction:column;border-bottom:0;margin:0;gap:6px;overflow:visible}
-#help .rail button{flex:0 0 auto;width:100%;min-width:0;margin:0;padding:20px 22px;border:0;border-left:3px solid var(--line);border-radius:0 14px 14px 0;font-size:18px!important;line-height:1.35;color:var(--ink-3);transition:background .25s,border-color .25s,color .25s,box-shadow .25s}
-#help .rail button:hover{color:var(--ink);background:rgba(52,80,240,.04)}
-#help .rail button[aria-selected="true"]{color:var(--ink);font-weight:600;border-left-color:var(--blue);background:#fff;box-shadow:0 14px 30px -22px rgba(21,20,51,.4)}
-#help .benpanel{padding:24px}
-#help .benpanel .panel.on{grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
-#help .benpanel .panel.on>.stage{order:-1}
-#help .benpanel .panel.on>div:first-child{padding:0 8px 8px}
-#help .stage.dotfade{height:330px!important;padding:22px!important}
-#help .stage.dotfade .tv-img{max-height:280px!important}
-}
-@media(max-width:960px){#help .hv-split{display:block}#help .rail{margin-bottom:16px}}
-</style>
 </head>
 <body class="nf">
 <div class="rp-hero-backdrop"><div class="rp-hero-shell">
@@ -2816,10 +2800,11 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <h2 class="h2">Learning that fits the working day</h2>
 <p>From creating courses to keeping training current, RuleProof handles the work that goes into learning while giving you visibility into progress and results.</p>
 </div>
-<div class="hv-split"><div class="rail" data-rail="h" role="tablist">
+<div class="rail" data-rail="h" role="tablist">
 <button aria-selected="true" role="tab">Short enough to fit into the day.</button>
 <button aria-selected="false" role="tab">Practise decisions, not just recall.</button>
 <button aria-selected="false" role="tab">See where support is needed.</button>
+<button aria-selected="false" role="tab">Spend less time managing training.</button>
 <button aria-selected="false" role="tab">Keep lessons current when sources change.</button>
 </div>
 <div class="card benpanel">
@@ -2829,9 +2814,10 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <div class="stage b tv-imgstage dotfade"><img alt="Anti-money laundering scenario with Correct feedback" class="tv-img" loading="lazy" src="../assets/about/training-mock-aml-scenario.png"/></div></div>
 <div class="panel" data-panel="h"><div><h3>See where support is needed.</h3><p>See who's progressing, who's falling behind and which modules people keep failing, so you know where support is needed.</p></div>
 <div class="stage b tv-imgstage dotfade"><img alt="Knowledge gaps by topic with a high knowledge gap alert" class="tv-img" loading="lazy" src="../assets/about/training-mock-knowledge-gaps.png"/></div></div>
+<div class="panel" data-panel="h"><div><h3>Spend less time managing training.</h3><p>From creating courses to assigning learners, sending reminders and tracking progress, RuleProof handles the repetitive work.</p></div>
+<div class="stage b tv-imgstage dotfade"><img alt="Training completion report, certificates, audit evidence and learner activity" class="tv-img" loading="lazy" src="../assets/about/training-mock-reports.png"/></div></div>
 <div class="panel" data-panel="h"><div><h3>Keep lessons current when sources change.</h3><p>When a policy or document changes, upload the new version and update only the affected lessons without rebuilding the entire course or campaign.</p></div>
 <div class="stage b tv-imgstage dotfade"><img alt="Updated PDF and DOC flowing into modules, content updated automatically" class="tv-img" loading="lazy" src="../assets/about/training-mock-content-updated.png"/></div></div>
-</div>
 </div>
 </div>
 </section>
