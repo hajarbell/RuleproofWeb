@@ -2771,7 +2771,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <section class="tr-types to-b ty-2" data-n="4" id="types">
 <div class="wrap">
 <div class="head center">
-<h2 class="h2">Training that changes what people do</h2>
+<h2 class="h2">Training that actually changes behaviour</h2>
 <p>Create courses that prepare your team to make better decisions on the job, with practical assessments that test their judgment and automatic progress tracking.</p><p>Whether you're delivering mandatory compliance training or upskilling your team, RuleProof has a workflow that fits.</p>
 </div>
 <div class="ty-seg"><button aria-selected="true" data-tc="0">Compliance training</button><button aria-selected="false" data-tc="1">Skills-based training</button></div>
@@ -2847,13 +2847,52 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <h2 class="h2">Choose the format that helps learning stick</h2>
 <p>Not everyone learns the same way. Choose the format that helps people understand, remember and apply what they've learned.</p>
 </div>
-<div class="grid-3">
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><path d="M6 3v18M6 5h11l-2 4 2 4H6"></path></svg></div><h3>Interactive scenarios</h3><p>Put learners in real-life situations where they need to make decisions and use their judgment.</p></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="3" y="5"></rect><path d="m17 10 4-2v8l-4-2"></path></svg></div><h3>Video &amp; AI avatars</h3><p>Explain concepts visually with AI avatars and voiceovers instead of relying on text alone.</p></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"></path></svg></div><h3>Quizzes &amp; assessments</h3><p>Check understanding at the end of each module and reinforce the key concepts.</p></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="12" rx="2" width="14" x="3" y="7"></rect><path d="M7 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"></path></svg></div><h3>Flashcards</h3><p>Give learners a quick way to revisit what they've learned whenever they need a refresher.</p></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></div><h3>Mobile learning</h3><p>Access short lessons from a phone without needing to sit down at a computer.</p></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M7 12h4M13 12h4M7 15h10"></path></svg></div><h3>Captions &amp; multiple languages</h3><p>Make training easier to follow when audio isn't an option, and deliver content in multiple languages.</p></div>
+<style id="fx-css">
+.fmt .fxg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.fmt .fx{border:1px solid rgba(157,180,255,.16);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));overflow:hidden;display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s}
+.fmt .fx:hover{transform:translateY(-4px);border-color:rgba(157,180,255,.34)}
+.fmt .fxv{height:190px;padding:22px;display:flex;align-items:center;justify-content:center;background:radial-gradient(70% 80% at 50% 40%,rgba(52,80,240,.28),transparent 72%),rgba(255,255,255,.02);border-bottom:1px solid rgba(157,180,255,.12)}
+.fmt .fxt{padding:22px 24px 26px}
+.fmt .fxt h3{font-size:20px;margin:0 0 8px;color:#fff;line-height:1.2}
+.fmt .fxt p{font-size:15px;line-height:1.55;margin:0;color:rgba(255,255,255,.7)}
+.fmt .ui{background:#fff;color:var(--ink);border-radius:14px;box-shadow:0 18px 36px -16px rgba(0,0,0,.6);padding:12px 14px;width:100%;max-width:280px;font-size:12.5px}
+.fmt .ui b{font-weight:600;display:block;margin-bottom:8px}
+.fmt .op{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:8px;color:var(--ink-2);font-size:12px}
+.fmt .op i{width:12px;height:12px;border-radius:50%;border:1.5px solid #B9C4E8;flex:none}
+.fmt .op.on{background:#E6ECFF;color:var(--ink);font-weight:600}.fmt .op.on i{border:3.5px solid var(--blue);background:#fff}
+.fmt .op.ok{background:#E3F6EC;color:#12794A;font-weight:600}.fmt .op.ok i{border-color:#21B573;background:#21B573}
+.fmt .vid{position:relative;width:100%;max-width:290px;aspect-ratio:16/9;border-radius:14px;background:linear-gradient(150deg,#3A4BC4,#1C1B42);box-shadow:0 18px 36px -16px rgba(0,0,0,.6);overflow:hidden}
+.fmt .vid .av{position:absolute;left:50%;top:58%;width:74px;height:74px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 50% 36%,#F2C9A5 0 22%,transparent 23%),radial-gradient(ellipse at 50% 112%,#8FA2FF 0 46%,transparent 47%);}
+.fmt .vid .pl{position:absolute;left:10px;bottom:10px;right:10px;display:flex;align-items:center;gap:8px}
+.fmt .vid .pl s{width:18px;height:18px;border-radius:50%;background:#fff;flex:none;display:grid;place-items:center;text-decoration:none}
+.fmt .vid .pl s:after{content:"";border-left:6px solid var(--blue);border-top:4px solid transparent;border-bottom:4px solid transparent;margin-left:2px}
+.fmt .vid .pl em{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.3);position:relative;font-style:normal}
+.fmt .vid .pl em:before{content:"";position:absolute;left:0;top:0;bottom:0;width:42%;border-radius:4px;background:#5DB4FF}
+.fmt .vid .tag{position:absolute;left:10px;top:10px;font-size:10px;font-weight:600;color:#fff;background:rgba(255,255,255,.16);border-radius:99px;padding:3px 8px}
+.fmt .fc{position:relative;width:230px;height:132px}
+.fmt .fc div{position:absolute;inset:0;border-radius:14px;background:#fff;color:var(--ink);box-shadow:0 18px 36px -16px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:600;font-size:14px;text-align:center;padding:0 16px}
+.fmt .fc div small{font-weight:500;color:var(--ink-3);font-size:11px;margin-top:6px}
+.fmt .fc .b2{transform:translate(14px,-12px) scale(.94);background:#DCE5FF;opacity:.9}
+.fmt .fc .b1{transform:translate(7px,-6px) scale(.97);background:#EAF0FF}
+.fmt .fph{width:112px;height:168px;border-radius:20px;border:4px solid #fff;background:#fff;box-shadow:0 18px 36px -16px rgba(0,0,0,.6);padding:14px 10px;color:var(--ink);position:relative;margin-top:30px}
+.fmt .fph:before{content:"";position:absolute;top:5px;left:50%;width:30px;height:5px;margin-left:-15px;border-radius:4px;background:#E3E8F5}
+.fmt .fph .pv{height:62px;border-radius:8px;background:linear-gradient(150deg,#5B73F5,#1C1B42);margin:6px 0 8px}
+.fmt .fph i{display:block;height:5px;border-radius:4px;background:#DCE5FF;margin-top:6px}
+.fmt .fph .pb{height:20px;border-radius:7px;background:var(--blue);margin-top:10px}
+.fmt .cap{position:absolute;left:12px;right:12px;bottom:34px;text-align:center;font-size:11px;font-weight:600;color:#fff;background:rgba(11,12,38,.72);border-radius:6px;padding:4px 6px}
+.fmt .lang{position:absolute;right:10px;top:10px;display:flex;gap:4px}
+.fmt .lang span{font-size:9px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);border-radius:5px;padding:2px 5px}
+.fmt .lang span.on{background:#fff;color:var(--blue)}
+@media(max-width:1000px){.fmt .fxg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.fmt .fxg{grid-template-columns:1fr}}
+</style>
+<div class="fxg">
+<div class="fx"><div class="fxv"><div class="ui"><b>What do you do next?</b><div class="op"><i></i>Ignore it</div><div class="op on"><i></i>Report it to compliance</div><div class="op"><i></i>Wait and see</div></div></div><div class="fxt"><h3>Interactive scenarios</h3><p>Put learners in real-life situations where they need to make decisions and use their judgment.</p></div></div>
+<div class="fx"><div class="fxv"><div class="vid"><span class="tag">AI avatar</span><div class="av"></div><div class="pl"><s></s><em></em></div></div></div><div class="fxt"><h3>Video &amp; AI avatars</h3><p>Explain concepts visually with AI avatars and voiceovers instead of relying on text alone.</p></div></div>
+<div class="fx"><div class="fxv"><div class="ui"><b>Question 2 of 5</b><div class="op"><i></i>Option A</div><div class="op ok"><i></i>Option B</div><div class="op"><i></i>Option C</div></div></div><div class="fxt"><h3>Quizzes &amp; assessments</h3><p>Check understanding at the end of each module and reinforce the key concepts.</p></div></div>
+<div class="fx"><div class="fxv"><div class="fc"><div class="b2"></div><div class="b1"></div><div>What is a suspicious transaction?<small>Tap to flip</small></div></div></div><div class="fxt"><h3>Flashcards</h3><p>Give learners a quick way to revisit what they've learned whenever they need a refresher.</p></div></div>
+<div class="fx"><div class="fxv"><div class="fph"><i style="width:60%"></i><div class="pv"></div><i></i><i style="width:70%"></i><div class="pb"></div></div></div><div class="fxt"><h3>Mobile learning</h3><p>Access short lessons from a phone without needing to sit down at a computer.</p></div></div>
+<div class="fx"><div class="fxv"><div class="vid"><div class="lang"><span class="on">EN</span><span>FR</span><span>DE</span></div><div class="av"></div><div class="cap">Report it to the compliance team</div><div class="pl"><s></s><em></em></div></div></div><div class="fxt"><h3>Captions &amp; multiple languages</h3><p>Make training easier to follow when audio isn't an option, and deliver content in multiple languages.</p></div></div>
 </div>
 </div>
 </section>
