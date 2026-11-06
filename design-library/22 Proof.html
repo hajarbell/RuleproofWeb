@@ -2992,7 +2992,8 @@ section#tiers{padding-bottom:24px!important}section#frameworks{padding-top:48px!
 /* homepage rhythm: white, pale grey (#F5F7FC), white, grey ... blue only as a soft glow */
 section#steps{background:#fff!important}
 section#tiers{background:#F5F7FC!important}
-section#frameworks{background:#fff!important;position:relative;overflow:hidden}
+section#frameworks{background:linear-gradient(180deg,#E6EDFF 0%,#EEF2FF 55%,#F5F7FC 100%)!important;position:relative;overflow:hidden}
+section#frameworks:after{content:"";position:absolute;width:640px;height:640px;left:-180px;top:30%;border-radius:50%;background:radial-gradient(closest-side,rgba(124,147,255,.34),transparent);pointer-events:none}
 section#frameworks:before{content:"";position:absolute;width:760px;height:420px;left:50%;top:-170px;margin-left:-380px;border-radius:50%;background:radial-gradient(closest-side,rgba(150,168,245,.38),rgba(190,203,250,.2) 50%,transparent);pointer-events:none}
 section#frameworks>.wrap{position:relative;z-index:1}
 section#context{background:#F5F7FC!important}
