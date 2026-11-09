@@ -2856,6 +2856,17 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 @media(max-width:960px){.fmt.fm-2 .grid-3{grid-template-columns:1fr 1fr!important}}
 @media(max-width:560px){.fmt.fm-2 .grid-3{grid-template-columns:1fr!important}}
 </style>
+<style id="fm-type">
+.fmt.fm-2 .grid-3{gap:0 56px!important;margin-top:44px;counter-reset:fm}
+.fmt.fm-2 .grid-3 .card{counter-increment:fm;position:relative;background:none!important;border:0!important;border-top:1px solid rgba(157,180,255,.28)!important;border-radius:0!important;box-shadow:none!important;padding:26px 0 30px 52px!important;overflow:visible;transform:none}
+.fmt.fm-2 .grid-3 .card .icon{display:none!important}
+.fmt.fm-2 .grid-3 .card:before{content:"0" counter(fm);position:absolute;left:0;top:35px;font-size:14px;font-weight:650;letter-spacing:.08em;color:#9DB4FF}
+.fmt.fm-2 .grid-3 .card h3{font-size:24px!important;font-weight:600;letter-spacing:-.01em;line-height:1.25;color:#fff;transition:color .3s,transform .4s var(--ease)}
+.fmt.fm-2 .grid-3 .card:hover{background:none!important;box-shadow:none!important;transform:none}
+.fmt.fm-2 .grid-3 .card:hover h3{color:#9DB4FF;transform:translateX(6px)}
+@media(max-width:960px){.fmt.fm-2 .grid-3{grid-template-columns:1fr 1fr!important;gap:0 32px!important}}
+@media(max-width:560px){.fmt.fm-2 .grid-3{grid-template-columns:1fr!important}.fmt.fm-2 .grid-3 .card h3{font-size:21px!important}}
+</style>
 <div class="grid-3">
 <div class="card"><div class="icon"><svg viewbox="0 0 24 24"><path d="M6 3v18M6 5h11l-2 4 2 4H6"></path></svg></div><h3>Interactive scenarios</h3></div>
 <div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="3" y="5"></rect><path d="m17 10 4-2v8l-4-2"></path></svg></div><h3>Video &amp; AI avatars</h3></div>
