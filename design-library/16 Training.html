@@ -2750,7 +2750,6 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <style id="tr-bg">
 /* homepage rhythm: alternate soft tint / white, with the same soft blue glow */
 .tr-types{background:radial-gradient(ellipse 60% 50% at 85% 0%,rgba(80,104,255,.10),transparent 70%),#F5F7FC!important}
-.proof2.pf3{background:#fff!important}
 .fmb{background:#F5F7FC!important}
 #cmpsec{background:radial-gradient(ellipse 55% 55% at 10% 0%,rgba(80,104,255,.10),transparent 70%),#fff!important}
 #roi{background:radial-gradient(ellipse 60% 50% at 90% 0%,rgba(80,104,255,.12),transparent 70%),#F5F7FC!important}
@@ -2899,6 +2898,17 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </div>
 </section>
 <!-- 07 AUDIT-READY PROOF · list + audit pack that builds itself (records drop into the folder) -->
+<style id="pf3-navy">
+body .proof2.pf3.pf3[data-n]{max-width:1320px;margin:16px auto!important;border-radius:28px;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;padding-top:72px!important;padding-bottom:72px!important;overflow:hidden}
+@media(max-width:1352px){.proof2.pf3{margin:16px 16px!important}}@media(max-width:640px){.proof2.pf3{margin:8px!important;border-radius:20px}}
+.proof2.pf3 .pf3-head h2{color:#fff}
+.proof2.pf3 .pf3-head p{color:#B9C8EC}
+.proof2.pf3 .pf3-head .btn-primary{background:#fff!important;color:#151433!important}
+.proof2.pf3 .pf3-lefts li b{color:#fff}
+.proof2.pf3 .pf3-lefts li span{color:#B9C8EC}
+.proof2.pf3 .pf3-lefts li i{background:rgba(157,180,255,.18)!important;border-color:#9DB4FF!important}
+.proof2.pf3 .pf3-panel{box-shadow:0 34px 60px -34px rgba(0,0,0,.8),0 0 0 1px rgba(157,180,255,.28);background:linear-gradient(150deg,#23225A,#14133A)!important}
+</style>
 <section class="proof2 pf3" data-n="7">
 <div class="wrap">
 <div class="pf3-head"><h2 class="h2">Keep the records behind every course</h2><p>Everything documented and ready when you need it.</p><a class="btn btn-primary" href="#demo">See RuleProof in action</a></div>
@@ -3301,7 +3311,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 
   // how it works: chain, 7s per link, pauses on hover
   (function () {
-    var sec = document.getElementById('how'), btns = sec.querySelectorAll('#chain button'), panels = sec.querySelectorAll('.mpanel'), fill = document.getElementById('fill');
+    var sec = document.getElementById('how'); if (!sec) return; var btns = sec.querySelectorAll('#chain button'), panels = sec.querySelectorAll('.mpanel'), fill = document.getElementById('fill');
     var n = btns.length, idx = 0, elapsed = 0, last = 0, raf, paused = false, DUR = 7000;
     function render(i) { btns.forEach(function (b, j) { b.setAttribute('aria-selected', j === i); b.classList.toggle('done', j < i); }); panels.forEach(function (p, j) { p.classList.toggle('on', j === i); }); }
     function setFill(p) { fill.style.width = ((idx + (idx === n - 1 ? 0 : p)) / (n - 1) * 100).toFixed(2) + '%'; }
