@@ -2839,10 +2839,6 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <style id="hc-first">
 #help{margin:0 16px;border-radius:28px;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
 #help .head .h2{color:#fff}#help .head p{color:#B9C8EC}
-#help .hc .hic{display:none!important}
-#help .hg>.hc.w3:first-of-type{background:radial-gradient(ellipse 55% 75% at 78% 45%,rgba(255,255,255,.22),transparent 70%),linear-gradient(135deg,#3450F0 0%,#2A3FC4 100%);border-color:#5068FF;color:#fff}
-#help .hg>.hc.w3:first-of-type h3{color:#fff}
-#help .hg>.hc.w3:first-of-type p{color:#E3EAFF}
 @media(max-width:640px){#help{margin:0 8px;border-radius:20px}}
 </style>
 <div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><h3>Short enough to fit into the day.</h3><p>Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p></div><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div>
@@ -2882,14 +2878,15 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 @media(max-width:560px){.fmt.fm-2 .grid-3{grid-template-columns:1fr!important}.fmt.fm-2 .grid-3 .card h3{font-size:21px!important}}
 </style>
 <style id="fm-ux">
-.fmt .fx{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:center;margin-top:36px}
-.fx-l{display:grid;gap:0}
-.fx-b{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:13px 0 13px 22px;border-left:2px solid rgba(157,180,255,.18);transition:border-color .2s ease-out}
+.fmt .fx{display:block;margin-top:36px}
+.fmt.fm-2 .head{display:block!important;max-width:none!important;width:100%;text-align:center}.fmt.fm-2 .head h2{max-width:none!important;margin-left:auto;margin-right:auto;text-align:center}
+.fx-l{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:44px}
+.fx-b{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:10px 18px;border-radius:99px;border:1px solid rgba(157,180,255,.25);transition:background .2s ease-out,border-color .2s ease-out}
 .fx-b u{text-decoration:none;font-size:13px;font-weight:650;letter-spacing:.08em;color:rgba(157,180,255,.6)}
-.fx-b b{font-size:18px;line-height:1.3;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s ease-out}
-.fx-b.on{border-left-color:#7C93FF}.fx-b.on b{color:#fff}
+.fx-b b{font-size:15px;line-height:1.3;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s ease-out}
+.fx-b.on{background:#fff;border-color:#fff}.fx-b.on b{color:#151433}
 .fx-b:hover b{color:#fff}.fx-b:focus-visible{outline:2px solid #9DB4FF;outline-offset:2px}
-.fx-s{display:grid;border-radius:20px;padding:28px;background:#EEF2FF;min-height:320px}
+.fx-s{display:grid;max-width:640px;margin:0 auto 36px;border-radius:22px;padding:44px 48px;background:#EEF2FF;min-height:320px;box-shadow:0 14px 0 -8px rgba(238,242,255,.5),0 28px 0 -16px rgba(238,242,255,.25)}
 .fx-p{grid-area:1/1;align-self:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s var(--ease),transform .45s var(--ease)}.fx-p.on{opacity:1;transform:none;pointer-events:auto}
 .fx-c,.fx-v,.fx-fc{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 20px 40px -24px rgba(21,20,51,.4);color:#151433}
 .fx-q{display:block;font-size:19px;font-weight:620;margin-bottom:14px}
