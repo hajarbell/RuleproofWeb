@@ -2774,6 +2774,11 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <h2 class="h2">Training that actually changes behaviour</h2>
 <p>Build courses that help your team make better decisions on the job, with assessments that test their judgment and progress tracked automatically.</p>
 </div>
+<style id="ty-both">
+.tr-types.ty-2 .grid-2{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+.tr-types.ty-2 .grid-2>.card:nth-child(n):not(.on){display:grid!important}
+@media(max-width:960px){.tr-types.ty-2 .grid-2>.card:nth-child(n){grid-template-columns:1fr!important}.tr-types.ty-2 .grid-2>.card:nth-child(n)>.stage,.tr-types.ty-2 .grid-2>.card:nth-child(n)>:not(.stage){grid-column:1!important;grid-row:auto!important}}
+</style>
 <div class="grid-2">
 <div class="card">
 <div class="stage tv-imgstage"><img alt="Compliance course library: anti-bribery, data protection, code of conduct and more, with a shield" class="tv-img" loading="lazy" src="../assets/about/training-mock-compliance-library.png"/></div>
@@ -2885,33 +2890,38 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <p>From source documents and course versions to assignments, completions, certifications and reports, keep everything documented and ready when you need it.</p>
 
 </div>
-<div class="pf3-vis" aria-hidden="true"><div class="pf3-card"><div class="pf3-top"><b>Audit pack</b><span>Ready</span></div><ul><li style="--k:0"><span>Source clause</span><b>GDPR Art. 5, clause 4.2</b><i></i></li><li style="--k:1"><span>Assigned</span><b>248 people, 6 teams</b><i></i></li><li style="--k:2"><span>Average score</span><b>86%</b><i></i></li><li style="--k:3"><span>Sign-off</span><b>Head of Compliance, 12 Sep</b><i></i></li></ul><div class="pf3-btn">Export PDF</div></div></div>
+<div class="pf3-vis" aria-label="Example audit packs"><div class="pf3-stage" id="pf3"><div class="pf3-card" data-o="0"><div class="pf3-top"><b>GDPR training</b><span>Audit pack</span></div><ul><li style="--k:0"><span>Source clause</span><b>GDPR Art. 5, clause 4.2</b><i></i></li><li style="--k:1"><span>Assigned</span><b>248 people, 6 teams</b><i></i></li><li style="--k:2"><span>Average score</span><b>86%</b><i></i></li><li style="--k:3"><span>Sign-off</span><b>Head of Compliance, 12 Sep</b><i></i></li></ul><div class="pf3-btn">Export PDF</div></div><div class="pf3-card" data-o="1"><div class="pf3-top"><b>ICT risk course</b><span>Audit pack</span></div><ul><li style="--k:0"><span>Source clause</span><b>DORA Art. 5, clause 2</b><i></i></li><li style="--k:1"><span>Assigned</span><b>132 people, 4 teams</b><i></i></li><li style="--k:2"><span>Average score</span><b>91%</b><i></i></li><li style="--k:3"><span>Sign-off</span><b>CISO, 3 Oct</b><i></i></li></ul><div class="pf3-btn">Export PDF</div></div><div class="pf3-card" data-o="-1"><div class="pf3-top"><b>Anti-bribery policy</b><span>Audit pack</span></div><ul><li style="--k:0"><span>Source clause</span><b>ISO 37001, clause 7.3</b><i></i></li><li style="--k:1"><span>Assigned</span><b>310 people, 9 teams</b><i></i></li><li style="--k:2"><span>Average score</span><b>84%</b><i></i></li><li style="--k:3"><span>Sign-off</span><b>Head of Legal, 21 Sep</b><i></i></li></ul><div class="pf3-btn">Export PDF</div></div></div><div class="pf3-dots" role="tablist"><button type="button" aria-label="Audit pack 1" aria-selected="true"></button><button type="button" aria-label="Audit pack 2" aria-selected="false"></button><button type="button" aria-label="Audit pack 3" aria-selected="false"></button></div></div>
 </div>
-</section>
 <style id="pf3-css">
 .proof2.pf3{background:#fff!important;padding-top:96px!important;padding-bottom:104px!important}
-.pf3 .pf3-copy p{max-width:460px;margin-top:20px}
 .pf3 .split{align-items:center}
-.pf3-pts{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px}
-.pf3-pts li{font-size:17px;line-height:1.5;color:#151433;padding-left:20px;position:relative}
-.pf3-pts li:before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:#3450F0;border-radius:2px}
-.pf3-vis{background:#F5F7FC;border-radius:20px;padding:72px 56px;display:flex;justify-content:center}
-.pf3-card{width:100%;max-width:420px;background:#fff;border:1px solid #E3E8F5;border-radius:14px;padding:26px 26px 22px;box-shadow:0 18px 36px -28px rgba(21,20,51,.4)}
-.pf3-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.pf3-top b{font-size:18px;font-weight:600;color:#151433}
+.pf3 .pf3-copy p{max-width:460px;margin-top:20px}
+.pf3-vis{background:#F5F7FC;border-radius:20px;padding:56px 0 28px;overflow:hidden;position:relative}
+.pf3-stage{position:relative;height:392px;perspective:1100px}
+.pf3-card{position:absolute;left:50%;top:0;width:360px;margin-left:-180px;background:#fff;border:1px solid #E3E8F5;border-radius:14px;padding:24px 24px 20px;box-shadow:0 18px 36px -28px rgba(21,20,51,.4);transition:transform .5s cubic-bezier(.23,1,.32,1),opacity .5s cubic-bezier(.23,1,.32,1);transform:translateX(0) scale(1);z-index:3}
+.pf3-card[data-o="1"]{transform:translateX(66%) rotateY(-26deg) scale(.86);opacity:.5;z-index:1}
+.pf3-card[data-o="-1"]{transform:translateX(-66%) rotateY(26deg) scale(.86);opacity:.5;z-index:1}
+.pf3-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.pf3-top b{font-size:17px;font-weight:600;color:#151433}
 .pf3-top span{font-size:12px;font-weight:600;color:#3450F0;background:#EEF2FF;padding:4px 10px;border-radius:99px}
 .pf3-card ul{list-style:none;margin:0;padding:0}
-.pf3-card li{display:grid;grid-template-columns:1fr auto 18px;gap:14px;align-items:center;padding:18px 0;border-bottom:1px solid #EEF1F8;font-size:14px}
+.pf3-card li{display:grid;grid-template-columns:1fr auto 18px;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid #EEF1F8;font-size:13.5px}
 .pf3-card li span{color:#68718B}
 .pf3-card li b{font-weight:600;color:#151433;text-align:right}
-.pf3-card li i{width:18px;height:18px;border-radius:50%;background:#3450F0;position:relative}
+.pf3-card li i{width:18px;height:18px;border-radius:50%;background:#3450F0;position:relative;transform:scale(0);transition:transform .3s cubic-bezier(.23,1,.32,1)}
 .pf3-card li i:after{content:"";position:absolute;left:6px;top:3px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-.pf3-btn{margin-top:24px;text-align:center;padding:13px;border-radius:9px;background:#151433;color:#fff;font-size:14px;font-weight:600}
-@media(prefers-reduced-motion:no-preference){.pf3-card li{animation:pf3-in .45s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.12s)}.pf3-card li i{animation:pf3-pop .3s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.12s + .25s)}}
-@keyframes pf3-in{from{opacity:0;transform:translateY(8px)}}
-@keyframes pf3-pop{from{transform:scale(.4);opacity:0}}
-@media(max-width:960px){.pf3-vis{padding:32px 20px}}
+.pf3-card[data-o="0"] li i{transform:scale(1);transition-delay:calc(var(--k)*.14s + .25s)}
+.pf3-btn{margin-top:22px;text-align:center;padding:12px;border-radius:9px;background:#151433;color:#fff;font-size:14px;font-weight:600}
+.pf3-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.pf3-dots button{width:8px;height:8px;padding:0;border:0;border-radius:99px;background:#C9D2EA;cursor:pointer;transition:width .25s cubic-bezier(.23,1,.32,1),background .25s}
+.pf3-dots button[aria-selected=true]{width:24px;background:#3450F0}
+.pf3-dots button:focus-visible{outline:2px solid #3450F0;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.pf3-card,.pf3-card li i{transition:none}}
+@media(max-width:960px){.pf3-card{width:300px;margin-left:-150px}.pf3-stage{height:380px}}
 </style>
+<script>(function(){var r=document.getElementById("pf3");if(!r)return;var c=[].slice.call(r.children),d=[].slice.call(r.parentNode.querySelectorAll(".pf3-dots button")),a=0,t,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;function go(n){a=(n+c.length)%c.length;c.forEach(function(e,i){var o=(i-a+c.length)%c.length;e.setAttribute("data-o",o==0?0:o==1?1:-1)});d.forEach(function(b,i){b.setAttribute("aria-selected",i==a)})}function run(){if(rm)return;clearInterval(t);t=setInterval(function(){go(a+1)},4200)}d.forEach(function(b,i){b.addEventListener("click",function(){go(i);run()})});r.parentNode.addEventListener("mouseenter",function(){clearInterval(t)});r.parentNode.addEventListener("mouseleave",run);run()})()</script>
+</section>
+
 <!-- 13 WHITE-LABEL · banner -->
 <section class="wlb-sec" data-n="13">
 <div class="wrap">
