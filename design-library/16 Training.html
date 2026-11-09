@@ -2881,40 +2881,56 @@ r.addEventListener('mouseenter',function(){hov=true;clearTimeout(t)});r.addEvent
 addEventListener('resize',function(){go(cur)});new IntersectionObserver(function(e){inv=e[0].isIntersecting;run()},{threshold:.3}).observe(r);go(0)})();</script>
 </div>
 </section>
-<!-- 06 FORMATS · slim banner -->
-<section class="fmb" data-n="6">
-<div class="wrap">
-<div class="fmb-card">
-<h2>Choose the format that helps learning stick</h2>
-<div class="fmb-pills"><span style="--k:0">Interactive scenarios</span><span style="--k:1">Video &amp; AI avatars</span><span style="--k:2">Quizzes &amp; assessments</span><span style="--k:3">Flashcards</span><span style="--k:4">Mobile learning</span><em class="fmb-plus" style="--k:5">+</em><span class="fmb-hl" style="--k:6">Captions &amp; multiple languages</span></div>
-</div>
-</div>
-<style>
-.fmb{background:#fff;padding:24px 0 16px}
-.fmb-card{display:flex;align-items:center;gap:32px;border-radius:20px;padding:24px 32px;color:#fff;border:0;background:radial-gradient(ellipse 55% 140% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)}
-.fmb-card h2{flex:0 0 380px;margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
-.fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:8px}
-.fmb-pills span{padding:7px 14px;border-radius:99px;background:rgba(157,180,255,.12);border:1px solid rgba(157,180,255,.32);font-size:14px;font-weight:500;color:#fff}
-@media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}}
-.fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#fff;align-self:center;padding:0 2px}
-.fmb-pills .fmb-hl{background:#fff;border-color:#fff;color:#151433;font-weight:600}
-@keyframes fmb-in{from{opacity:0;transform:translateY(8px)}}
-@media(max-width:900px){.fmb-card{flex-direction:column;align-items:flex-start;gap:20px;padding:26px 22px}.fmb-card h2{flex:none;font-size:23px}}
+<!-- 06 FORMATS · toggle + panel -->
+<section class="fpx" data-n="6"><style id="fp-css">
+.fpx{padding:72px 0 80px;background:linear-gradient(180deg,#F4F7FF,#E9EFFF)}
+.fpx .fp-h{text-align:center;margin:0 auto 28px;font-size:clamp(28px,2.8vw,40px);line-height:1.15;letter-spacing:-.02em;font-weight:600;color:#151433;max-width:720px}
+.fpx .fp-l{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:760px;margin:0 auto}
+.fp-b{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:13px 16px;border-radius:99px;background:#fff;border:1px solid #DCE5FF;font-size:15px;font-weight:600;color:#4A4D6E;box-shadow:0 10px 20px -16px rgba(52,80,240,.4);transition:background .3s,color .3s,transform .3s var(--ease,ease),border-color .3s}
+.fp-b:hover{transform:translateY(-2px);border-color:#3450F0}
+.fp-b.on{background:#151433;border-color:#151433;color:#fff}
+.fp-b:focus-visible{outline:2px solid #3450F0;outline-offset:2px}
+.fpx .fp-s{display:grid;max-width:1100px;margin:24px auto 0;border-radius:28px;background:#fff;border:1px solid #E3E8F5;box-shadow:0 34px 60px -40px rgba(52,80,240,.45);overflow:hidden}
+.fp-p{grid-area:1/1;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:340px;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .3s,transform .5s var(--ease,ease)}
+.fp-p.on{opacity:1;transform:none;pointer-events:auto}
+.fp-t{padding:44px 44px;align-self:center}
+.fp-k{display:block;margin-bottom:14px;font-size:12px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:#3450F0}
+.fp-t h3{margin:0 0 12px;font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.02em;color:#151433}
+.fp-t p{margin:0;font-size:16px;line-height:1.6;color:#4A4D6E}
+.fp-m{display:grid;align-items:center;padding:34px 40px;background:radial-gradient(ellipse 60% 70% at 85% 0%,rgba(80,104,255,.28),transparent 70%),linear-gradient(135deg,#EEF2FF,#DCE5FF)}
+.fp-m>*{width:100%;max-width:440px;justify-self:center}
+@media(max-width:800px){.fpx .fp-l{grid-template-columns:1fr 1fr}.fp-p{grid-template-columns:1fr}.fp-t{padding:28px 24px}}
+@media(prefers-reduced-motion:reduce){.fp-p,.fp-b{transition:none}}
+.fx-c,.fx-v,.fx-fc{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 20px 40px -24px rgba(21,20,51,.4);color:#151433}
+.fx-q{display:block;font-size:19px;font-weight:620;margin-bottom:14px}
+.fx-o{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-top:8px;border-radius:12px;border:1px solid #DCE5FF;font-size:15px;color:#4A4D6E}.fx-o i{width:16px;height:16px;border-radius:50%;border:2px solid #C9D6FF;flex:none}
+.fx-o.on{background:#EEF2FF;border-color:#3450F0;color:#151433;font-weight:600}.fx-o.on i{border:5px solid #3450F0}
+.fx-f{margin-top:16px;font-size:14px;font-weight:600;color:#4A4D6E}.fx-f.ok{padding:10px 14px;border-radius:12px;background:#E3F6EC;color:#1E7C4D}
+.fx-m{display:flex;justify-content:space-between;font-size:13px;color:#7B7F9E;margin:2px 0 10px}
+.fx-bar{height:6px;border-radius:6px;background:#DCE5FF;overflow:hidden;margin-bottom:14px}.fx-bar s{display:block;height:100%;background:#3450F0;border-radius:6px}
+.fx-scr{position:relative;height:200px;border-radius:14px;background:linear-gradient(135deg,#3450F0,#151433);overflow:hidden;margin-bottom:14px}
+.fx-av{position:absolute;left:22px;top:22px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;display:grid;place-items:center;font-weight:650}
+.fx-pl{position:absolute;left:50%;top:44%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(255,255,255,.92)}.fx-pl:after{content:"";position:absolute;left:21px;top:16px;border-left:15px solid #151433;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.fx-cap{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:84%;text-align:center;padding:8px 12px;border-radius:8px;background:rgba(11,12,38,.78);color:#fff;font-size:13.5px;line-height:1.4}
+.fx-langs{display:flex;flex-wrap:wrap;gap:8px}.fx-langs span{padding:7px 14px;border-radius:99px;border:1px solid #DCE5FF;font-size:13.5px;font-weight:600;color:#4A4D6E}.fx-langs .on{background:#151433;border-color:#151433;color:#fff}
+.fx-fc{position:relative;background:none;box-shadow:none;padding:0;height:290px}
+.fx-card{position:absolute;left:50%;width:78%;height:210px;margin-left:-39%;border-radius:18px;background:#fff;box-shadow:0 20px 40px -24px rgba(21,20,51,.45)}
+.fx-card.b{top:30px;transform:scale(.86);opacity:.5}.fx-card.m{top:16px;transform:scale(.93);opacity:.8}
+.fx-card.t{top:0;display:grid;align-content:center;justify-items:center;text-align:center;gap:10px;padding:24px;height:216px;z-index:2}.fx-card.t small{font-size:12px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:#7B7F9E}.fx-card.t b{font-size:21px;line-height:1.3}.fx-card.t span{font-size:13px;color:#3450F0;font-weight:600}
+.fx-btns{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:12px}.fx-btns span{padding:10px 20px;border-radius:12px;border:1px solid #C9D6FF;background:#fff;font-size:14px;font-weight:600;color:#4A4D6E}.fx-btns .p{background:#151433;border-color:#151433;color:#fff}
+.fx-ph{display:grid;place-items:center}.fx-phone{width:240px;padding:30px 18px 18px;border-radius:34px;background:#fff;border:7px solid #151433;box-shadow:0 24px 44px -22px rgba(21,20,51,.6);color:#151433}
+.fx-notch{display:block;width:70px;height:6px;border-radius:6px;background:#151433;margin:-18px auto 16px}.fx-phone small{display:block;font-size:12px;color:#7B7F9E}.fx-phone>b{display:block;font-size:17px;line-height:1.3;margin:4px 0 8px}.fx-phone .fx-o{font-size:13.5px;padding:10px 12px}
+.fx-pbtn{margin-top:14px;padding:11px;border-radius:12px;background:#3450F0;color:#fff;text-align:center;font-size:14px;font-weight:600}
 </style>
+<div class="wrap"><h2 class="fp-h">Choose the format that helps learning stick</h2>
+<div class="fp-l"><button type="button" class="fp-b on" data-i="0">Interactive scenarios</button><button type="button" class="fp-b" data-i="1">Video &amp; AI avatars</button><button type="button" class="fp-b" data-i="2">Quizzes &amp; assessments</button><button type="button" class="fp-b" data-i="3">Flashcards</button><button type="button" class="fp-b" data-i="4">Mobile learning</button><button type="button" class="fp-b" data-i="5">Captions &amp; languages</button></div><div class="fp-s"><div class="fp-p on" data-i="0"><div class="fp-t"><span class="fp-k">Interactive scenarios</span><h3>Let people practise the call, not just recall it</h3><p>Real situations with choices, so judgment gets tested on the job.</p></div><div class="fp-m"><div class="fx-c"><b class="fx-q">What do you do next?</b><div class="fx-o"><i></i>Ignore it, the client is long-standing</div><div class="fx-o on"><i></i>Report it to the compliance team</div><div class="fx-o"><i></i>Wait to see if it happens again</div><div class="fx-f ok">Good call. Reporting protects you and the client.</div></div></div></div><div class="fp-p" data-i="1"><div class="fp-t"><span class="fp-k">Video &amp; AI avatars</span><h3>Turn any document into a video lesson</h3><p>An AI presenter walks through your content, no filming needed.</p></div><div class="fp-m"><div class="fx-v"><div class="fx-scr"><span class="fx-av">A</span><span class="fx-pl"></span><div class="fx-cap">Today we are covering what counts as a conflict of interest.</div></div><div class="fx-bar"><s style="width:42%"></s></div><div class="fx-m"><span>Lesson 3 &middot; 2:10</span><span>AI avatar</span></div></div></div></div><div class="fp-p" data-i="2"><div class="fp-t"><span class="fp-k">Quizzes &amp; assessments</span><h3>Check understanding as people learn</h3><p>Short questions with pass marks and results tracked for you.</p></div><div class="fp-m"><div class="fx-c"><div class="fx-m"><span>Question 2 of 5</span><span>Pass mark 80%</span></div><div class="fx-bar"><s style="width:40%"></s></div><b class="fx-q">Which of these must be reported?</b><div class="fx-o"><i></i>A gift worth 20 euros</div><div class="fx-o on"><i></i>A gift worth 400 euros</div><div class="fx-o"><i></i>A branded pen</div><div class="fx-f">Next question</div></div></div></div><div class="fp-p" data-i="3"><div class="fp-t"><span class="fp-k">Flashcards</span><h3>Make the key points stick</h3><p>Quick cards people can flip through and revisit before they forget.</p></div><div class="fp-m"><div class="fx-fc"><div class="fx-card b"></div><div class="fx-card m"></div><div class="fx-card t"><small>Question</small><b>When must a suspicious transaction be reported?</b><span>Tap to flip</span></div><div class="fx-btns"><span>Review again</span><span class="p">I know this</span></div></div></div></div><div class="fp-p" data-i="4"><div class="fp-t"><span class="fp-k">Mobile learning</span><h3>Training that fits into the day</h3><p>Bite-sized lessons people finish on their phone in minutes.</p></div><div class="fp-m"><div class="fx-ph"><div class="fx-phone"><span class="fx-notch"></span><small>Lesson 2 of 6 &middot; 3 min</small><b>Spotting a phishing email</b><div class="fx-o on"><i></i>Report it to IT</div><div class="fx-o"><i></i>Reply to confirm</div><div class="fx-pbtn">Continue</div></div></div></div></div><div class="fp-p" data-i="5"><div class="fp-t"><span class="fp-k">Captions &amp; languages</span><h3>Reach everyone in their own language</h3><p>Automatic captions and translations, ready for every team.</p></div><div class="fp-m"><div class="fx-v"><div class="fx-scr"><span class="fx-pl"></span><div class="fx-cap">Today we are covering what counts as a conflict of interest.</div></div><div class="fx-langs"><span class="on">English</span><span>Fran&ccedil;ais</span><span>Deutsch</span><span>Espa&ntilde;ol</span><span>Nederlands</span></div></div></div></div></div></div>
+<script>(function(){var r=document.querySelector('.fpx');if(!r)return;var b=[].slice.call(r.querySelectorAll('.fp-b')),p=[].slice.call(r.querySelectorAll('.fp-p'));function go(i){b.forEach(function(x,n){x.classList.toggle('on',n===i)});p.forEach(function(x,n){x.classList.toggle('on',n===i)})}b.forEach(function(x,n){x.addEventListener('click',function(){go(n)})})})();</script>
 </section>
 <!-- 07 AUDIT-READY PROOF · list + audit pack that builds itself (records drop into the folder) -->
 <section class="proof2 pf3" data-n="7">
 <div class="wrap">
 <div class="pf3-head"><h2 class="h2">Keep the records behind every course</h2><p>Everything documented and ready when you need it.</p><a class="btn btn-primary" href="#demo">See RuleProof in action</a></div>
-<div class="pf3-bento">
-<div class="pf3-view"><div class="pf3-shots">
-<figure class="pf3-shot" data-o="0" style="--k:0"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Audit packs</b><small>Generate and download audit evidence packs.</small></div><span class="rk-dark">Generate pack</span></div><div class="rk-card"><div class="rk-th"><span>Scope</span><span>Date range</span><span>Status</span><span></span></div><div class="rk-tr" style="--k:0"><span class="rk-s">Anti-bribery policy</span><span>01.10.2026 – 09.11.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:1"><span class="rk-s">GDPR training</span><span>01.09.2026 – 30.09.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:2"><span class="rk-s">ICT risk course</span><span>01.08.2026 – 31.08.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:3"><span class="rk-s">Code of conduct</span><span>01.07.2026 – 31.07.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div></div></div></div></figure>
-<figure class="pf3-shot" data-o="1" style="--k:1"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Analytics</b><small>Organization-wide learning and compliance insights.</small></div></div><div class="rk-kr"><div class="rk-k" style="--k:0"><small>Learners enrolled</small><b>248</b><em>Across live programs</em></div><div class="rk-k" style="--k:1"><small>Completion rate</small><b>86%</b><u><s style="--w:86%"></s></u></div><div class="rk-k" style="--k:2"><small>Certification rate</small><b>72%</b><u><s style="--w:72%"></s></u></div></div><div class="rk-card"><div class="rk-h">Program progress</div><div class="rk-pr" style="--k:3"><span class="rk-s">GDPR training</span><i class="rk-pill ok">Published</i><u><s style="--w:92%"></s></u><b>92%</b></div><div class="rk-pr" style="--k:4"><span class="rk-s">ICT risk course</span><i class="rk-pill ok">Published</i><u><s style="--w:78%"></s></u><b>78%</b></div><div class="rk-pr" style="--k:5"><span class="rk-s">Anti-bribery policy</span><i class="rk-pill ok">Published</i><u><s style="--w:64%"></s></u><b>64%</b></div></div></div></div></figure>
-<figure class="pf3-shot" data-o="-1" style="--k:2"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Completion records</b><small>Results and certificates for every learner.</small></div></div><div class="rk-card"><div class="rk-th rk-c4"><span>Learner</span><span>Course</span><span>Score</span><span>Certificate</span></div><div class="rk-tr rk-c4" style="--k:0"><span class="rk-s">Amira K.</span><span>GDPR training</span><span>94%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:1"><span class="rk-s">Daniel R.</span><span>ICT risk course</span><span>88%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:2"><span class="rk-s">Sofia M.</span><span>Anti-bribery policy</span><span>91%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:3"><span class="rk-s">Lucas B.</span><span>Code of conduct</span><span>79%</span><span><i class="rk-pill wn">Pending</i></span></div></div></div></div></figure>
-</div>
-<div class="pf3-dots" role="tablist"><button type="button" aria-label="Audit packs" aria-selected="true"></button><button type="button" aria-label="Analytics" aria-selected="false"></button><button type="button" aria-label="Completion records" aria-selected="false"></button></div></div>
-<div class="pf3-mini"><span class="pf3-bar"></span><h3>Trace it to the source</h3><p>See the clause behind every lesson.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>Keep every record</h3><p>Captured as it happens.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>See beyond completion</h3><p>Know where people struggled.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>Export in minutes</h3><p>Audit packs, ready when you need them.</p></div>
-</div>
+<div class="pf3-sw" role="group" aria-label="Preview left side design"><span>Preview</span><button type="button" data-l="1" aria-pressed="true">1</button><button type="button" data-l="2" aria-pressed="false">2</button><button type="button" data-l="3" aria-pressed="false">3</button></div><div class="pf3-one" data-left="1"><div class="pf3-lefts"><ul class="lv lv1"><li style="--k:0"><i></i><div><b>Trace it to the source</b><span>See the clause behind every lesson.</span></div></li><li style="--k:1"><i></i><div><b>Keep every record</b><span>Captured as it happens.</span></div></li><li style="--k:2"><i></i><div><b>See beyond completion</b><span>Know where people struggled.</span></div></li><li style="--k:3"><i></i><div><b>Export in minutes</b><span>Audit packs, ready when you need them.</span></div></li></ul><div class="lv lv2"><div class="lt" style="--k:0"><em>Source</em><b>Trace it to the source</b><span>See the clause behind every lesson.</span></div><div class="lt" style="--k:1"><em>Record</em><b>Keep every record</b><span>Captured as it happens.</span></div><div class="lt" style="--k:2"><em>Insight</em><b>See beyond completion</b><span>Know where people struggled.</span></div><div class="lt" style="--k:3"><em>Export</em><b>Export in minutes</b><span>Audit packs, ready when you need them.</span></div></div><ul class="lv lv3"><li style="--k:0"><span class="li-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><div><b>Trace it to the source</b><span>See the clause behind every lesson.</span></div></li><li style="--k:1"><span class="li-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span><div><b>Keep every record</b><span>Captured as it happens.</span></div></li><li style="--k:2"><span class="li-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.9.1 5 2.4 5 5.3"/></svg></span><div><b>See beyond completion</b><span>Know where people struggled.</span></div></li><li style="--k:3"><span class="li-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></span><div><b>Export in minutes</b><span>Audit packs, ready when you need them.</span></div></li></ul></div><div class="pf3-panel"><div class="pf3-solo" data-o="0"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Audit packs</b><small>Generate and download audit evidence packs.</small></div><span class="rk-dark">Generate pack</span></div><div class="rk-card"><div class="rk-th"><span>Scope</span><span>Date range</span><span>Status</span><span></span></div><div class="rk-tr" style="--k:0"><span class="rk-s">Anti-bribery policy</span><span>01.10.2026 – 09.11.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:1"><span class="rk-s">GDPR training</span><span>01.09.2026 – 30.09.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:2"><span class="rk-s">ICT risk course</span><span>01.08.2026 – 31.08.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:3"><span class="rk-s">Code of conduct</span><span>01.07.2026 – 31.07.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div></div></div></div></div></div></div>
 </div>
 <style id="pf3-css">
 .proof2.pf3{background:#fff!important;padding-top:96px!important;padding-bottom:104px!important}
@@ -3034,7 +3050,61 @@ addEventListener('resize',function(){go(cur)});new IntersectionObserver(function
 .pf3-head h2{margin:0;max-width:none}
 .pf3-head p{justify-self:auto;max-width:520px;margin:14px 0 0}
 .pf3-head .btn{margin-top:24px}
+
+.pf3-one{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;max-width:1040px;margin:0 auto}
+.pf3-list{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+.pf3-list li{display:grid;grid-template-columns:22px 1fr;gap:16px;align-items:start}
+.pf3-list i{width:22px;height:22px;border-radius:50%;background:#3450F0;position:relative;margin-top:2px}
+.pf3-list i:after{content:"";position:absolute;left:8px;top:4px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pf3-list b{display:block;font-size:19px;font-weight:600;color:#151433}
+.pf3-list span{display:block;margin-top:3px;font-size:15.5px;line-height:1.5;color:#68718B}
+.pf3-panel{background:radial-gradient(ellipse 60% 70% at 85% 0%,rgba(80,104,255,.4),transparent 70%),linear-gradient(150deg,#151433,#0B0C26);border-radius:24px;padding:40px}
+.pf3-solo{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 30px 50px -30px rgba(0,0,0,.6)}
+.pf3-solo .pf3-img{height:auto;border:0;background:#F7F8FD}
+.pf3-solo .pf3-mock{padding:20px 22px;font-size:12.5px}
+@media(max-width:900px){.pf3-one{grid-template-columns:1fr;gap:32px}.pf3-panel{padding:22px}}
+.pf3-solo .rk-th,.pf3-solo .rk-tr{grid-template-columns:1.2fr 1.6fr .7fr .9fr;gap:8px}
+.pf3-solo .rk-tr span:nth-child(2){white-space:nowrap;font-size:12px}
+
+.proof2.pf3{position:relative}
+.pf3-sw{position:absolute;top:14px;right:16px;display:flex;align-items:center;gap:4px;padding:4px 6px 4px 10px;border:1px dashed #B8C3EA;border-radius:99px;background:rgba(255,255,255,.8);font-size:11px;color:#7B7F9E;z-index:5}
+.pf3-sw button{width:24px;height:24px;border-radius:50%;border:0;background:transparent;color:#4A4D6E;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.pf3-sw button[aria-pressed=true]{background:#151433;color:#fff}
+.pf3-sw button:focus-visible{outline:2px solid #3450F0;outline-offset:1px}
+.lv{display:none;margin:0;padding:0;list-style:none}
+.pf3-one[data-left="1"] .lv1{display:grid}.pf3-one[data-left="2"] .lv2{display:grid}.pf3-one[data-left="3"] .lv3{display:grid}
+.lv b{display:block;font-size:19px;font-weight:600;color:#151433}
+.lv span{color:#68718B}
+/* 1 timeline */
+.lv1{gap:0}
+.lv1 li{position:relative;display:grid;grid-template-columns:22px 1fr;gap:18px;padding-bottom:30px}
+.lv1 li:last-child{padding-bottom:0}
+.lv1 li:not(:last-child):before{content:"";position:absolute;left:10px;top:24px;bottom:2px;width:2px;background:linear-gradient(#3450F0,#C9D6FF);transform-origin:top}
+.lv1 i{width:22px;height:22px;border-radius:50%;border:2px solid #3450F0;background:#fff;position:relative;margin-top:2px}
+.lv1 i:after{content:"";position:absolute;inset:4px;border-radius:50%;background:#3450F0}
+.lv1 span{display:block;margin-top:3px;font-size:15.5px;line-height:1.5}
+/* 2 tiles */
+.lv2{grid-template-columns:1fr 1fr;gap:14px}
+.lt{background:#fff;border:1px solid #E3E8F5;border-radius:18px;padding:18px 18px 20px;box-shadow:0 14px 26px -22px rgba(21,20,51,.4);transition:transform .2s ease-out,box-shadow .2s ease-out}
+.lt em{display:block;font-style:normal;font-size:26px;font-weight:700;letter-spacing:-.03em;color:#3450F0;margin-bottom:12px}
+.lt b{font-size:16px}
+.lt span{display:block;margin-top:4px;font-size:14px;line-height:1.45}
+@media(hover:hover) and (pointer:fine){.lt:hover{transform:translateY(-3px);box-shadow:0 22px 34px -22px rgba(52,80,240,.45)}}
+/* 3 icon rows */
+.lv3{gap:16px}
+.lv3 li{display:flex;gap:16px;align-items:center}
+.li-ic{flex:none;width:48px;height:48px;border-radius:14px;background:#EAEFFF;color:#3450F0;display:grid;place-items:center}
+.li-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lv3 li div span{display:block;margin-top:2px;font-size:14.5px}
+@media(prefers-reduced-motion:no-preference){
+.lv li,.lt{animation:lv-in .5s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.08s)}
+.lv1 li:not(:last-child):before{animation:lv-draw .6s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.12s + .15s)}}
+@keyframes lv-in{from{opacity:0;transform:translateY(8px)}}
+@keyframes lv-draw{from{transform:scaleY(0)}}
+@media(max-width:900px){.lv2{grid-template-columns:1fr 1fr}.pf3-sw{top:6px;right:10px}}
 </style>
+<script>(function(){var r=document.querySelector(".pf3-one[data-left]");if(!r)return;var b=[].slice.call(document.querySelectorAll(".pf3-sw button"));function set(n){r.setAttribute("data-left",n);b.forEach(function(x){x.setAttribute("aria-pressed",x.dataset.l==n)})}b.forEach(function(x){x.addEventListener("click",function(){set(x.dataset.l)})});var h=(location.hash||"").replace("#","");if(h=="1"||h=="2"||h=="3")set(h)})()</script>
+
 <script>(function(){var r=document.querySelector(".pf3-shots");if(!r)return;var c=[].slice.call(r.children),d=[].slice.call(r.parentNode.querySelectorAll(".pf3-dots button")),a=0,t,x0=null,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;function go(n){a=(n+c.length)%c.length;c.forEach(function(e,i){var o=(i-a+c.length)%c.length;e.setAttribute("data-o",o==0?0:o==1?1:-1)});d.forEach(function(b,i){b.setAttribute("aria-selected",i==a)})}function run(){if(rm)return;clearInterval(t);t=setInterval(function(){go(a+1)},6000)}d.forEach(function(b,i){b.addEventListener("click",function(){go(i);run()})});c.forEach(function(e,i){e.addEventListener("click",function(){if(i!=a){go(i);run()}})});r.addEventListener("pointerdown",function(e){x0=e.clientX});r.addEventListener("pointerup",function(e){if(x0===null)return;var dx=e.clientX-x0;x0=null;if(Math.abs(dx)>40){go(a+(dx<0?1:-1));run()}});r.parentNode.addEventListener("mouseenter",function(){clearInterval(t)});r.parentNode.addEventListener("mouseleave",run);run()})()</script>
 
 <script>(function(){var r=document.getElementById("pf3");if(!r)return;var c=[].slice.call(r.children),d=[].slice.call(r.parentNode.querySelectorAll(".pf3-dots button")),a=0,t,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;function go(n){a=(n+c.length)%c.length;c.forEach(function(e,i){var o=(i-a+c.length)%c.length;e.setAttribute("data-o",o==0?0:o==1?1:-1)});d.forEach(function(b,i){b.setAttribute("aria-selected",i==a)})}function run(){if(rm)return;clearInterval(t);t=setInterval(function(){go(a+1)},4200)}d.forEach(function(b,i){b.addEventListener("click",function(){go(i);run()})});r.parentNode.addEventListener("mouseenter",function(){clearInterval(t)});r.parentNode.addEventListener("mouseleave",run);run()})()</script>
