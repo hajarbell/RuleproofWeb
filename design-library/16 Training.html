@@ -2836,27 +2836,48 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 @media(max-width:760px){#help .hg{grid-template-columns:1fr}#help .hc,#help .hc.w2,#help .hc.w3{grid-column:auto;grid-template-columns:1fr;padding:22px;min-height:0}}
 </style>
 <style id="hc-first">
-#help{max-width:1320px;margin:16px auto!important;border-radius:28px;padding-top:56px!important;padding-bottom:48px!important;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
+#help{max-width:1320px;margin:16px auto!important;border-radius:28px;padding-top:52px!important;padding-bottom:40px!important;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
 @media(max-width:1352px){#help{margin:16px 16px!important}}@media(max-width:640px){#help{margin:8px!important;border-radius:20px}}
 #help .head{text-align:center;display:block!important;margin-bottom:0}
-#help .head .h2{color:#fff;font-size:clamp(28px,2.8vw,40px)!important;margin:0 auto 14px;max-width:760px}
+#help .head .h2{color:#fff;font-size:clamp(28px,2.8vw,40px)!important;margin:0 auto;max-width:760px}
 #help .head p{display:none!important}
-#help .hs{margin-top:32px}
-#help .hs-l{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-bottom:1px solid rgba(157,180,255,.22)}
-#help .hs-b{all:unset;box-sizing:border-box;cursor:pointer;position:relative;padding:18px 14px 20px;text-align:center;font-size:15px;line-height:1.35;font-weight:600;color:#9AA3BF;transition:color .3s}
-#help .hs-b:after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:3px;border-radius:3px;background:#9DB4FF;transform:scaleX(0);transition:transform .45s var(--ease)}
-#help .hs-b:hover{color:#fff}#help .hs-b.on{color:#fff}#help .hs-b.on:after{transform:scaleX(1)}
-#help .hs-b:focus-visible{outline:2px solid #9DB4FF;outline-offset:-2px}
-#help .hs-s{display:grid;margin-top:44px;padding:0 24px;min-height:300px}
-#help .hs-p{grid-area:1/1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s var(--ease),transform .5s var(--ease)}
-#help .hs-p.on{opacity:1;transform:none;pointer-events:auto}
-#help .hs-d{margin:0;font-size:20px;line-height:1.6;font-weight:400;color:#C3CCE6;letter-spacing:0}
-#help .hs-m{justify-self:end;width:100%;max-width:520px;padding:32px;border-radius:24px;background:radial-gradient(ellipse 60% 70% at 85% 0%,rgba(80,104,255,.25),transparent 70%),linear-gradient(135deg,#EEF2FF,#DCE5FF);box-shadow:0 24px 44px -26px rgba(0,0,0,.7)}
-#help .hs-m .hv{display:block;max-width:none;margin:0}
-#help .hs-m .hv:has(img){display:flex}#help .hs-m .hv img{max-height:230px}
-@media(max-width:900px){#help .hs-l{display:flex;overflow-x:auto;scrollbar-width:none}#help .hs-b{flex:none;padding:16px 18px;white-space:nowrap}#help .hs-p{grid-template-columns:1fr;gap:20px}#help .hs-s{padding:22px}#help .hs-d{font-size:19px}}
-@media(prefers-reduced-motion:reduce){#help .hs-p,#help .hs-b{transition:none}}
-</style><div class="hs"><div class="hs-l"><button type="button" class="hs-b on" data-i="0">Short enough to fit into the day</button><button type="button" class="hs-b" data-i="1">Practise decisions, not just recall</button><button type="button" class="hs-b" data-i="2">See where support is needed</button><button type="button" class="hs-b" data-i="3">Spend less time managing training</button><button type="button" class="hs-b" data-i="4">Keep lessons current when sources change</button></div><div class="hs-s"><div class="hs-p on" data-i="0"><p class="hs-d">Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p><div class="hs-m"><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div></div><div class="hs-p" data-i="1"><p class="hs-d">Learning alone doesn't show how someone will react. Real-life scenarios ask people to use their judgment and apply what they've learned.</p><div class="hs-m"><div class="hv"><div class="mini"><b>What do you do next?</b><div style="margin-top:8px"><div class="opt"><i></i>Ignore it, the client is long-standing</div><div class="opt on"><i></i>Report it to the compliance team</div><div class="opt"><i></i>Wait to see if it happens again</div></div></div></div></div></div><div class="hs-p" data-i="2"><p class="hs-d">See who's progressing, who's falling behind and which modules people keep failing.</p><div class="hs-m"><div class="hv"><div class="mini"><div class="ring"><span>92%</span></div><div style="text-align:center;color:var(--ink-3);font-size:11px;margin:-4px 0 6px">Team completion</div><div class="bar"><i style="width:78%"></i></div><div class="bar"><i style="width:62%"></i></div><div class="bar"><i style="width:44%;background:#F2A33A"></i></div></div></div></div></div><div class="hs-p" data-i="3"><p class="hs-d">From assigning learners to sending reminders and tracking progress, RuleProof handles the repetitive work.</p><div class="hs-m"><div class="hv" style="display:block;width:100%"><div class="row"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>Enrol team<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div><div class="row"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg>Send reminders<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div><div class="row"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Track progress<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div></div></div></div><div class="hs-p" data-i="4"><p class="hs-d">Upload the new version and update only the affected lessons, without rebuilding the course.</p><div class="hs-m"><div class="hv" style="display:block;width:100%"><div class="doc"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4"/></svg><div>Policy update<i></i></div></div><div class="doc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg><div>Training updated<i></i></div><span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div></div></div></div></div></div><script>(function(){var r=document.querySelector('#help .hs');if(!r)return;var b=[].slice.call(r.querySelectorAll('.hs-b')),p=[].slice.call(r.querySelectorAll('.hs-p'));function go(i){b.forEach(function(x,n){x.classList.toggle('on',n===i)});p.forEach(function(x,n){x.classList.toggle('on',n===i)})}b.forEach(function(x,n){x.addEventListener('click',function(){go(n)});x.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches)go(n)})})})();</script>
+#help .hk{margin:30px -240px 0;position:relative}
+#help .hk-vp{overflow:hidden;padding:6px 0 20px}
+#help .hk-tr{display:flex;gap:18px;transition:transform 1.1s cubic-bezier(.23,1,.32,1)}
+#help .hk-c{flex:none;width:430px;border-radius:22px;background:#fff;color:#151433;padding:16px 16px 20px;transform:scale(.88);opacity:.38;transition:transform .8s cubic-bezier(.23,1,.32,1),opacity .6s;box-shadow:0 30px 44px -28px rgba(0,0,0,.8);cursor:pointer}
+#help .hk-c.on{transform:none;opacity:1;cursor:default}
+#help .hk-m{height:250px;overflow:hidden;border-radius:16px;padding:16px;display:grid;align-items:center;background:radial-gradient(ellipse 60% 70% at 85% 0%,rgba(80,104,255,.25),transparent 70%),linear-gradient(135deg,#EEF2FF,#DCE5FF)}
+#help .hk-m .hv{display:block;max-width:none;margin:0}#help .hk-m .hv:has(img){display:flex;justify-content:center}#help .hk-m .hv img{max-height:185px}
+#help .hk-c h3{margin:16px 4px 6px;font-size:19px;line-height:1.25;font-weight:600;letter-spacing:-.01em;color:#151433}
+#help .hk-c p{margin:0 4px;font-size:14px;line-height:1.5;color:#4A4D6E}
+#help .hk-nav{display:flex;justify-content:center;align-items:center;gap:18px}
+#help .hk-nav button{all:unset;cursor:pointer;width:40px;height:40px;border-radius:12px;border:1px solid rgba(157,180,255,.35);display:grid;place-items:center;color:#fff;font-size:16px;transition:background .3s}
+#help .hk-nav button:hover{background:rgba(157,180,255,.18)}#help .hk-nav button:focus-visible{outline:2px solid #9DB4FF;outline-offset:2px}
+#help .hk-dots{display:flex;gap:8px}#help .hk-dots i{width:8px;height:8px;border-radius:8px;background:rgba(157,180,255,.35);transition:width .4s,background .4s;cursor:pointer}#help .hk-dots i.on{width:26px;background:#9DB4FF}
+#help .hk-m .hv{zoom:1.12}
+#help .hk-m .hv img{max-height:210px;animation:hkfloat 7s ease-in-out infinite}
+@keyframes hkfloat{50%{transform:translateY(-8px)}}
+#help .hk-c:not(.on) .hk-m *{animation-play-state:paused}
+#help .hk-c.on .ring{animation:hkpop .9s cubic-bezier(.23,1,.32,1) .3s both}
+#help .hk-c.on .bar i{animation:hkbar 1.1s cubic-bezier(.23,1,.32,1) .5s both;transform-origin:left}
+#help .hk-c.on .row,#help .hk-c.on .doc{animation:hkin .7s cubic-bezier(.23,1,.32,1) both}
+#help .hk-c.on .row:nth-child(2),#help .hk-c.on .doc:nth-child(2){animation-delay:.25s}#help .hk-c.on .row:nth-child(3){animation-delay:.5s}
+#help .hk-c.on .row .ok{animation:hkpop .5s cubic-bezier(.23,1,.32,1) .9s both}
+#help .hk-c.on .opt.on{animation:hksel .8s ease .6s both}
+@keyframes hkpop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+@keyframes hkbar{from{transform:scaleX(0)}to{transform:none}}
+@keyframes hkin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes hksel{from{background:transparent}to{background:#E6ECFF}}
+@media(prefers-reduced-motion:reduce){#help .hk-m *{animation:none!important}}
+@media(max-width:700px){#help .hk-c{width:80vw}}
+@media(prefers-reduced-motion:reduce){#help .hk-tr,#help .hk-c{transition:none}}
+</style><div class="hk"><div class="hk-vp"><div class="hk-tr"><div class="hk-c on" data-i="0"><div class="hk-m"><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div><h3>Short enough to fit into the day</h3><p>Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p></div><div class="hk-c" data-i="1"><div class="hk-m"><div class="hv"><div class="mini"><b>What do you do next?</b><div style="margin-top:8px"><div class="opt"><i></i>Ignore it, the client is long-standing</div><div class="opt on"><i></i>Report it to the compliance team</div><div class="opt"><i></i>Wait to see if it happens again</div></div></div></div></div><h3>Practise decisions, not just recall</h3><p>Learning alone doesn't show how someone will react. Real-life scenarios ask people to use their judgment and apply what they've learned.</p></div><div class="hk-c" data-i="2"><div class="hk-m"><div class="hv"><div class="mini"><div class="ring"><span>92%</span></div><div style="text-align:center;color:var(--ink-3);font-size:11px;margin:-4px 0 6px">Team completion</div><div class="bar"><i style="width:78%"></i></div><div class="bar"><i style="width:62%"></i></div><div class="bar"><i style="width:44%;background:#F2A33A"></i></div></div></div></div><h3>See where support is needed</h3><p>See who's progressing, who's falling behind and which modules people keep failing.</p></div><div class="hk-c" data-i="3"><div class="hk-m"><div class="hv" style="display:block;width:100%"><div class="row"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>Enrol team<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div><div class="row"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg>Send reminders<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div><div class="row"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Track progress<span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div></div></div><h3>Spend less time managing training</h3><p>From assigning learners to sending reminders and tracking progress, RuleProof handles the repetitive work.</p></div><div class="hk-c" data-i="4"><div class="hk-m"><div class="hv" style="display:block;width:100%"><div class="doc"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4"/></svg><div>Policy update<i></i></div></div><div class="doc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg><div>Training updated<i></i></div><span class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></div></div></div><h3>Keep lessons current when sources change</h3><p>Upload the new version and update only the affected lessons, without rebuilding the course.</p></div></div></div><div class="hk-nav"><button type="button" data-d="-1" aria-label="Previous">&larr;</button><span class="hk-dots"><i class="on"></i><i></i><i></i><i></i><i></i></span><button type="button" data-d="1" aria-label="Next">&rarr;</button></div></div><script>(function(){var r=document.querySelector('#help .hk');if(!r)return;var tr=r.querySelector('.hk-tr'),c=[].slice.call(tr.children),d=[].slice.call(r.querySelectorAll('.hk-dots i')),cur=0,t,hov=false,inv=false,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(i){cur=(i+c.length)%c.length;var w=c[0].offsetWidth+18,vp=r.querySelector('.hk-vp').offsetWidth;tr.style.transform='translateX('+(vp/2-w/2-cur*w+9)+'px)';c.forEach(function(x,n){x.classList.toggle('on',n===cur)});d.forEach(function(x,n){x.classList.toggle('on',n===cur)});run()}
+function run(){clearTimeout(t);if(rm||hov||!inv)return;t=setTimeout(function(){go(cur+1)},7500)}
+[].slice.call(r.querySelectorAll('.hk-nav button')).forEach(function(x){x.addEventListener('click',function(){go(cur+ +x.getAttribute('data-d'))})});
+c.forEach(function(x,n){x.addEventListener('click',function(){go(n)})});d.forEach(function(x,n){x.addEventListener('click',function(){go(n)})});
+r.addEventListener('mouseenter',function(){hov=true;clearTimeout(t)});r.addEventListener('mouseleave',function(){hov=false;run()});
+addEventListener('resize',function(){go(cur)});new IntersectionObserver(function(e){inv=e[0].isIntersecting;run()},{threshold:.3}).observe(r);go(0)})();</script>
 </div>
 </section>
 <!-- 06 FORMATS · slim banner -->
@@ -2869,13 +2890,13 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </div>
 <style>
 .fmb{background:#fff;padding:24px 0 16px}
-.fmb-card{display:flex;align-items:center;gap:32px;border-radius:20px;padding:24px 32px;color:#fff;border:1px solid rgba(157,180,255,.22);background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)}
+.fmb-card{display:flex;align-items:center;gap:32px;border-radius:20px;padding:24px 32px;color:#fff;border:0;background:radial-gradient(ellipse 50% 120% at 100% 0%,rgba(255,255,255,.22),transparent 65%),linear-gradient(135deg,#3450F0,#2740D6)}
 .fmb-card h2{flex:0 0 380px;margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
 .fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:8px}
-.fmb-pills span{padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(157,180,255,.28);font-size:14px;font-weight:500;color:#E6ECFF}
+.fmb-pills span{padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);font-size:14px;font-weight:500;color:#fff}
 @media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}}
-.fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#9DB4FF;align-self:center;padding:0 2px}
-.fmb-pills .fmb-hl{background:#3450F0;border-color:#3450F0;color:#fff;font-weight:600}
+.fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#fff;align-self:center;padding:0 2px}
+.fmb-pills .fmb-hl{background:#fff;border-color:#fff;color:#2740D6;font-weight:600}
 @keyframes fmb-in{from{opacity:0;transform:translateY(8px)}}
 @media(max-width:900px){.fmb-card{flex-direction:column;align-items:flex-start;gap:20px;padding:26px 22px}.fmb-card h2{flex:none;font-size:23px}}
 </style>
@@ -2883,13 +2904,16 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <!-- 07 AUDIT-READY PROOF · list + audit pack that builds itself (records drop into the folder) -->
 <section class="proof2 pf3" data-n="7">
 <div class="wrap">
-<div class="pf3-head"><h2 class="h2">Keep the records behind every course</h2><p>Everything documented and ready when you need it.</p></div>
+<div class="pf3-head"><h2 class="h2">Keep the records behind every course</h2><p>Everything documented and ready when you need it.</p><a class="btn btn-primary" href="#demo">See RuleProof in action</a></div>
+<div class="pf3-bento">
 <div class="pf3-view"><div class="pf3-shots">
 <figure class="pf3-shot" data-o="0" style="--k:0"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Audit packs</b><small>Generate and download audit evidence packs.</small></div><span class="rk-dark">Generate pack</span></div><div class="rk-card"><div class="rk-th"><span>Scope</span><span>Date range</span><span>Status</span><span></span></div><div class="rk-tr" style="--k:0"><span class="rk-s">Anti-bribery policy</span><span>01.10.2026 – 09.11.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:1"><span class="rk-s">GDPR training</span><span>01.09.2026 – 30.09.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:2"><span class="rk-s">ICT risk course</span><span>01.08.2026 – 31.08.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div><div class="rk-tr" style="--k:3"><span class="rk-s">Code of conduct</span><span>01.07.2026 – 31.07.2026</span><span><i class="rk-pill ok">Ready</i></span><span class="rk-btn">Download</span></div></div></div></div></figure>
 <figure class="pf3-shot" data-o="1" style="--k:1"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Analytics</b><small>Organization-wide learning and compliance insights.</small></div></div><div class="rk-kr"><div class="rk-k" style="--k:0"><small>Learners enrolled</small><b>248</b><em>Across live programs</em></div><div class="rk-k" style="--k:1"><small>Completion rate</small><b>86%</b><u><s style="--w:86%"></s></u></div><div class="rk-k" style="--k:2"><small>Certification rate</small><b>72%</b><u><s style="--w:72%"></s></u></div></div><div class="rk-card"><div class="rk-h">Program progress</div><div class="rk-pr" style="--k:3"><span class="rk-s">GDPR training</span><i class="rk-pill ok">Published</i><u><s style="--w:92%"></s></u><b>92%</b></div><div class="rk-pr" style="--k:4"><span class="rk-s">ICT risk course</span><i class="rk-pill ok">Published</i><u><s style="--w:78%"></s></u><b>78%</b></div><div class="rk-pr" style="--k:5"><span class="rk-s">Anti-bribery policy</span><i class="rk-pill ok">Published</i><u><s style="--w:64%"></s></u><b>64%</b></div></div></div></div></figure>
 <figure class="pf3-shot" data-o="-1" style="--k:2"><div class="pf3-img"><div class="pf3-mock"><div class="rk-top"><div><b>Completion records</b><small>Results and certificates for every learner.</small></div></div><div class="rk-card"><div class="rk-th rk-c4"><span>Learner</span><span>Course</span><span>Score</span><span>Certificate</span></div><div class="rk-tr rk-c4" style="--k:0"><span class="rk-s">Amira K.</span><span>GDPR training</span><span>94%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:1"><span class="rk-s">Daniel R.</span><span>ICT risk course</span><span>88%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:2"><span class="rk-s">Sofia M.</span><span>Anti-bribery policy</span><span>91%</span><span><i class="rk-pill ok">Issued</i></span></div><div class="rk-tr rk-c4" style="--k:3"><span class="rk-s">Lucas B.</span><span>Code of conduct</span><span>79%</span><span><i class="rk-pill wn">Pending</i></span></div></div></div></div></figure>
 </div>
 <div class="pf3-dots" role="tablist"><button type="button" aria-label="Audit packs" aria-selected="true"></button><button type="button" aria-label="Analytics" aria-selected="false"></button><button type="button" aria-label="Completion records" aria-selected="false"></button></div></div>
+<div class="pf3-mini"><span class="pf3-bar"></span><h3>Trace it to the source</h3><p>See the clause behind every lesson.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>Keep every record</h3><p>Captured as it happens.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>See beyond completion</h3><p>Know where people struggled.</p></div><div class="pf3-mini"><span class="pf3-bar"></span><h3>Export in minutes</h3><p>Audit packs, ready when you need them.</p></div>
+</div>
 </div>
 <style id="pf3-css">
 .proof2.pf3{background:#fff!important;padding-top:96px!important;padding-bottom:104px!important}
@@ -2995,6 +3019,20 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 @media(max-width:700px){.pf3-view .pf3-shot{width:84vw;margin-left:-42vw}.pf3-view .pf3-shots{height:380px}.pf3-view .pf3-img{height:380px}}
 .pf3-view .rk-th:not(.rk-c4),.pf3-view .rk-tr:not(.rk-c4){grid-template-columns:1fr 1.7fr .7fr .9fr;gap:8px}
 .pf3-view .rk-tr:not(.rk-c4) span:nth-child(2){white-space:nowrap;font-size:11.5px}
+
+.pf3-bento .pf3-view{grid-row:1/3;max-width:none;margin:0;padding:30px 0 20px;display:flex;flex-direction:column;justify-content:center;border-radius:22px}
+.pf3-bento .pf3-shots{height:296px;overflow:visible}
+.pf3-bento .pf3-view .pf3-shot{transform:scale(.78);opacity:1}
+.pf3-bento .pf3-view .pf3-shot[data-o="1"]{transform:translateX(78%) rotateY(-14deg) scale(.66);opacity:.38}
+.pf3-bento .pf3-view .pf3-shot[data-o="-1"]{transform:translateX(-78%) rotateY(14deg) scale(.66);opacity:.38}
+.pf3-bento .pf3-view .pf3-dots{margin-top:14px}
+@media(max-width:1000px){.pf3-bento .pf3-view{grid-column:1/3;grid-row:auto}}
+@media(max-width:560px){.pf3-bento .pf3-view{grid-column:auto}.pf3-bento .pf3-view .pf3-shot{transform:scale(.7)}}
+
+.pf3-head{display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:0;margin-bottom:44px}
+.pf3-head h2{margin:0;max-width:none}
+.pf3-head p{justify-self:auto;max-width:520px;margin:14px 0 0}
+.pf3-head .btn{margin-top:24px}
 </style>
 <script>(function(){var r=document.querySelector(".pf3-shots");if(!r)return;var c=[].slice.call(r.children),d=[].slice.call(r.parentNode.querySelectorAll(".pf3-dots button")),a=0,t,x0=null,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;function go(n){a=(n+c.length)%c.length;c.forEach(function(e,i){var o=(i-a+c.length)%c.length;e.setAttribute("data-o",o==0?0:o==1?1:-1)});d.forEach(function(b,i){b.setAttribute("aria-selected",i==a)})}function run(){if(rm)return;clearInterval(t);t=setInterval(function(){go(a+1)},6000)}d.forEach(function(b,i){b.addEventListener("click",function(){go(i);run()})});c.forEach(function(e,i){e.addEventListener("click",function(){if(i!=a){go(i);run()}})});r.addEventListener("pointerdown",function(e){x0=e.clientX});r.addEventListener("pointerup",function(e){if(x0===null)return;var dx=e.clientX-x0;x0=null;if(Math.abs(dx)>40){go(a+(dx<0?1:-1));run()}});r.parentNode.addEventListener("mouseenter",function(){clearInterval(t)});r.parentNode.addEventListener("mouseleave",run);run()})()</script>
 
