@@ -2837,33 +2837,23 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </style>
 <div class="hg">
 <style id="hc-first">
-#help{max-width:1320px;margin:16px auto!important;border-radius:28px;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
-#help .head .h2{color:#fff}#help .head p{color:#B9C8EC}
-#help .hc{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02))!important;border:1px solid rgba(157,180,255,.22)!important;box-shadow:none}
-#help .hc:hover{border-color:rgba(157,180,255,.45)!important;box-shadow:0 28px 52px -28px rgba(0,0,0,.7)}
-#help .hc h3{color:#fff!important}#help .hc p{color:#B9C8EC!important}
-#help .hc .hic{background:rgba(93,120,255,.24)!important}#help .hc .hic svg{stroke:#BFD0FF!important}
-#help .hg>.hc.w3:first-of-type:before,#help .hg>.hc.w3:nth-of-type(2):before{content:"";position:absolute;right:6%;top:50%;width:46%;height:90%;transform:translateY(-50%);background:radial-gradient(closest-side,rgba(80,104,255,.45),transparent 75%);pointer-events:none}
-#help .hc>*{position:relative}
-#help .hc{box-shadow:0 34px 50px -28px rgba(0,0,0,.85),0 12px 22px -14px rgba(0,0,0,.5)!important;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s,opacity .7s var(--ease)}
-#help .hc:hover{transform:translateY(-6px);box-shadow:0 44px 64px -28px rgba(0,0,0,.9),0 14px 26px -14px rgba(0,0,0,.55)!important}
-#help.hca .hc{opacity:0;transform:translateY(28px)}
+#help{padding-top:64px!important;padding-bottom:64px!important}
+#help .head .h2{font-size:clamp(28px,2.8vw,40px)!important}#help .head p{font-size:16px!important}
+#help .hg{gap:16px!important;margin-top:32px!important}
+#help .hc{padding:24px 26px!important;min-height:0!important;border-radius:22px!important;gap:12px!important;background:#fff!important;border:1px solid #E3E8F5!important;box-shadow:0 24px 40px -30px rgba(21,20,51,.35)!important;transition:transform .45s var(--ease),box-shadow .45s var(--ease),opacity .7s var(--ease)}
+#help .hc:hover{transform:translateY(-5px);box-shadow:0 34px 52px -28px rgba(52,80,240,.4)!important}
+#help .hg>.hc.w3:first-of-type{background:radial-gradient(ellipse 55% 80% at 80% 50%,rgba(80,104,255,.22),transparent 70%),linear-gradient(135deg,#EEF2FF,#DCE5FF)!important;border-color:#C9D6FF!important}
+#help .hc .hic{width:40px!important;height:40px!important;margin-bottom:14px!important;background:#EEF2FF!important}#help .hc .hic svg{width:20px!important;height:20px!important}
+#help .hg>.hc.w3:first-of-type .hic{background:#fff!important}
+#help .hc h3{font-size:21px!important;margin-bottom:6px!important;color:#151433!important}
+#help .hc p{font-size:14.5px!important;line-height:1.5!important;color:#4A4D6E!important}
+#help .hc img{max-height:200px!important;width:auto!important;justify-self:center}
+#help.hca .hc{opacity:0;transform:translateY(24px)}
 #help.hca.hcin .hc{opacity:1;transform:none}
-#help.hca.hcin .hc:hover{transform:translateY(-6px)}
+#help.hca.hcin .hc:hover{transform:translateY(-5px)}
 #help.hca.hcin .hc:nth-child(2){transition-delay:.08s}#help.hca.hcin .hc:nth-child(3){transition-delay:.16s}#help.hca.hcin .hc:nth-child(4){transition-delay:.24s}#help.hca.hcin .hc:nth-child(5){transition-delay:.32s}
 #help.hca.hcin .hc:hover{transition-delay:0s}
-#help .hc img{animation:hcfloat 6s ease-in-out infinite}
-@keyframes hcfloat{50%{transform:translateY(-8px)}}
-@media(prefers-reduced-motion:reduce){#help.hca .hc{opacity:1;transform:none;transition:none}#help .hc img{animation:none}}
-#help{padding-top:56px!important;padding-bottom:56px!important}
-#help .head .h2{font-size:clamp(28px,2.8vw,40px)!important}#help .head p{font-size:16px!important}
-#help .hg{gap:14px!important;margin-top:28px!important}
-#help .hc{padding:20px 22px!important;min-height:0!important;border-radius:18px!important;gap:12px!important}
-#help .hc .hic{width:38px!important;height:38px!important;margin-bottom:12px!important}#help .hc .hic svg{width:19px!important;height:19px!important}
-#help .hc h3{font-size:20px!important;margin-bottom:6px!important}#help .hc p{font-size:14px!important;line-height:1.5!important}
-#help .hc img{max-height:210px!important;width:auto!important;justify-self:center}
-#help .hc>div:last-child:not(:first-child){transform:scale(.92);transform-origin:center}
-@media(max-width:1352px){#help{margin:16px 16px!important}}@media(max-width:640px){#help{margin:8px!important;border-radius:20px}}
+@media(prefers-reduced-motion:reduce){#help.hca .hc{opacity:1;transform:none;transition:none}}
 </style>
 <script>(function(){var h=document.getElementById('help');if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;h.classList.add('hca');var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){h.classList.add('hcin');io.disconnect()}},{threshold:.15});io.observe(h);setTimeout(function(){h.classList.add('hcin')},4000)})();</script><div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><h3>Short enough to fit into the day.</h3><p>Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p></div><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div>
 <div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="3"/><path d="M8 11v3M6.5 12.5h3M15.5 11.5h.01M17.5 13.5h.01"/></svg></span><h3>Practise decisions, not just recall.</h3><p>Learning alone doesn't show how someone will react. Real-life scenarios ask people to use their judgment and apply what they've learned.</p></div><div class="hv"><div class="mini"><b>What do you do next?</b><div style="margin-top:8px"><div class="opt"><i></i>Ignore it, the client is long-standing</div><div class="opt on"><i></i>Report it to the compliance team</div><div class="opt"><i></i>Wait to see if it happens again</div></div></div></div></div>
@@ -2884,7 +2874,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <style>
 .fmb{background:#fff;padding:24px 0 16px}
 .fmb-card{display:flex;align-items:center;gap:32px;border-radius:20px;padding:24px 32px;color:#fff;border:1px solid rgba(157,180,255,.22);background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)}
-.fmb-card h2{flex:0 0 300px;margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
+.fmb-card h2{flex:0 0 380px;margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
 .fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:8px}
 .fmb-pills span{padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(157,180,255,.28);font-size:14px;font-weight:500;color:#E6ECFF}
 @media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}}
