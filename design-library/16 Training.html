@@ -2775,6 +2775,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <p>Build courses that help your team make better decisions on the job, with assessments that test their judgment and progress tracked automatically.</p>
 </div>
 <style id="ty-both">
+.tr-types.ty-2 .grid-2>.card:first-child{background:linear-gradient(160deg,#EEF2FF 0%,#DCE5FF 100%)!important;border-color:#C9D6FF!important}
 .tr-types.ty-2 .grid-2{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
 .tr-types.ty-2 .grid-2>.card:nth-child(n):not(.on){display:grid!important}
 @media(max-width:960px){.tr-types.ty-2 .grid-2>.card:nth-child(n){grid-template-columns:1fr!important}.tr-types.ty-2 .grid-2>.card:nth-child(n)>.stage,.tr-types.ty-2 .grid-2>.card:nth-child(n)>:not(.stage){grid-column:1!important;grid-row:auto!important}}
@@ -2872,14 +2873,41 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 @media(max-width:960px){.fmt.fm-2 .grid-3{grid-template-columns:1fr 1fr!important;gap:0 32px!important}}
 @media(max-width:560px){.fmt.fm-2 .grid-3{grid-template-columns:1fr!important}.fmt.fm-2 .grid-3 .card h3{font-size:21px!important}}
 </style>
-<div class="grid-3">
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><path d="M6 3v18M6 5h11l-2 4 2 4H6"></path></svg></div><h3>Interactive scenarios</h3></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="3" y="5"></rect><path d="m17 10 4-2v8l-4-2"></path></svg></div><h3>Video &amp; AI avatars</h3></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"></path></svg></div><h3>Quizzes &amp; assessments</h3></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="12" rx="2" width="14" x="3" y="7"></rect><path d="M7 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"></path></svg></div><h3>Flashcards</h3></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></div><h3>Mobile learning</h3></div>
-<div class="card"><div class="icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M7 12h4M13 12h4M7 15h10"></path></svg></div><h3>Captions &amp; multiple languages</h3></div>
-</div>
+<style id="fm-ux">
+.fmt .fx{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center;margin-top:44px}
+.fx-l{display:grid;gap:4px}
+.fx-b{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:34px 1fr;align-items:baseline;padding:15px 22px;border-radius:16px;border:1px solid transparent;transition:background .3s var(--ease),border-color .3s}
+.fx-b u{text-decoration:none;font-size:13px;font-weight:650;letter-spacing:.08em;color:rgba(157,180,255,.6)}
+.fx-b b{font-size:23px;line-height:1.25;font-weight:600;letter-spacing:-.01em;color:rgba(255,255,255,.55);transition:color .3s}
+.fx-b.on{background:rgba(157,180,255,.12);border-color:rgba(157,180,255,.3)}.fx-b.on b{color:#fff}.fx-b.on u{color:#9DB4FF}
+.fx-b:hover b{color:#fff}.fx-b:focus-visible{outline:2px solid #9DB4FF;outline-offset:2px}
+.fx-s{display:grid;border-radius:24px;padding:34px;background:linear-gradient(160deg,#EEF2FF,#DCE5FF);min-height:360px;box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.fx-p{grid-area:1/1;align-self:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s var(--ease),transform .45s var(--ease)}.fx-p.on{opacity:1;transform:none;pointer-events:auto}
+.fx-c,.fx-v,.fx-fc{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 20px 40px -24px rgba(21,20,51,.4);color:#151433}
+.fx-q{display:block;font-size:19px;font-weight:620;margin-bottom:14px}
+.fx-o{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-top:8px;border-radius:12px;border:1px solid #DCE5FF;font-size:15px;color:#4A4D6E}.fx-o i{width:16px;height:16px;border-radius:50%;border:2px solid #C9D6FF;flex:none}
+.fx-o.on{background:#EEF2FF;border-color:#3450F0;color:#151433;font-weight:600}.fx-o.on i{border:5px solid #3450F0}
+.fx-f{margin-top:16px;font-size:14px;font-weight:600;color:#4A4D6E}.fx-f.ok{padding:10px 14px;border-radius:12px;background:#E3F6EC;color:#1E7C4D}
+.fx-m{display:flex;justify-content:space-between;font-size:13px;color:#7B7F9E;margin:2px 0 10px}
+.fx-bar{height:6px;border-radius:6px;background:#DCE5FF;overflow:hidden;margin-bottom:14px}.fx-bar s{display:block;height:100%;background:#3450F0;border-radius:6px}
+.fx-scr{position:relative;height:200px;border-radius:14px;background:linear-gradient(135deg,#3450F0,#151433);overflow:hidden;margin-bottom:14px}
+.fx-av{position:absolute;left:22px;top:22px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;display:grid;place-items:center;font-weight:650}
+.fx-pl{position:absolute;left:50%;top:44%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(255,255,255,.92)}.fx-pl:after{content:"";position:absolute;left:21px;top:16px;border-left:15px solid #151433;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.fx-cap{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:84%;text-align:center;padding:8px 12px;border-radius:8px;background:rgba(11,12,38,.78);color:#fff;font-size:13.5px;line-height:1.4}
+.fx-langs{display:flex;flex-wrap:wrap;gap:8px}.fx-langs span{padding:7px 14px;border-radius:99px;border:1px solid #DCE5FF;font-size:13.5px;font-weight:600;color:#4A4D6E}.fx-langs .on{background:#151433;border-color:#151433;color:#fff}
+.fx-fc{position:relative;background:none;box-shadow:none;padding:0;height:290px}
+.fx-card{position:absolute;left:50%;width:78%;height:210px;margin-left:-39%;border-radius:18px;background:#fff;box-shadow:0 20px 40px -24px rgba(21,20,51,.45)}
+.fx-card.b{top:30px;transform:scale(.86);opacity:.5}.fx-card.m{top:16px;transform:scale(.93);opacity:.8}
+.fx-card.t{top:0;display:grid;align-content:center;justify-items:center;text-align:center;gap:10px;padding:24px;height:216px;z-index:2}.fx-card.t small{font-size:12px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:#7B7F9E}.fx-card.t b{font-size:21px;line-height:1.3}.fx-card.t span{font-size:13px;color:#3450F0;font-weight:600}
+.fx-btns{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:12px}.fx-btns span{padding:10px 20px;border-radius:12px;border:1px solid #C9D6FF;background:#fff;font-size:14px;font-weight:600;color:#4A4D6E}.fx-btns .p{background:#151433;border-color:#151433;color:#fff}
+.fx-ph{display:grid;place-items:center}.fx-phone{width:240px;padding:30px 18px 18px;border-radius:34px;background:#fff;border:7px solid #151433;box-shadow:0 24px 44px -22px rgba(21,20,51,.6);color:#151433}
+.fx-notch{display:block;width:70px;height:6px;border-radius:6px;background:#151433;margin:-18px auto 16px}.fx-phone small{display:block;font-size:12px;color:#7B7F9E}.fx-phone>b{display:block;font-size:17px;line-height:1.3;margin:4px 0 8px}.fx-phone .fx-o{font-size:13.5px;padding:10px 12px}
+.fx-pbtn{margin-top:14px;padding:11px;border-radius:12px;background:#3450F0;color:#fff;text-align:center;font-size:14px;font-weight:600}
+@media(max-width:900px){.fmt .fx{grid-template-columns:1fr;gap:24px}.fx-b b{font-size:20px}.fx-s{padding:20px;min-height:0}}
+@media(prefers-reduced-motion:reduce){.fx-p,.fx-b{transition:none}}
+</style>
+<div class="fx"><div class="fx-l"><button type="button" class="fx-b on" data-i="0"><u>01</u><b>Interactive scenarios</b></button><button type="button" class="fx-b" data-i="1"><u>02</u><b>Video &amp; AI avatars</b></button><button type="button" class="fx-b" data-i="2"><u>03</u><b>Quizzes &amp; assessments</b></button><button type="button" class="fx-b" data-i="3"><u>04</u><b>Flashcards</b></button><button type="button" class="fx-b" data-i="4"><u>05</u><b>Mobile learning</b></button><button type="button" class="fx-b" data-i="5"><u>06</u><b>Captions &amp; multiple languages</b></button></div><div class="fx-s"><div class="fx-p on" data-i="0"><div class="fx-c"><b class="fx-q">What do you do next?</b><div class="fx-o"><i></i>Ignore it, the client is long-standing</div><div class="fx-o on"><i></i>Report it to the compliance team</div><div class="fx-o"><i></i>Wait to see if it happens again</div><div class="fx-f ok">Good call. Reporting protects you and the client.</div></div></div><div class="fx-p" data-i="1"><div class="fx-v"><div class="fx-scr"><span class="fx-av">A</span><span class="fx-pl"></span><div class="fx-cap">Today we are covering what counts as a conflict of interest.</div></div><div class="fx-bar"><s style="width:42%"></s></div><div class="fx-m"><span>Lesson 3 &middot; 2:10</span><span>AI avatar</span></div></div></div><div class="fx-p" data-i="2"><div class="fx-c"><div class="fx-m"><span>Question 2 of 5</span><span>Pass mark 80%</span></div><div class="fx-bar"><s style="width:40%"></s></div><b class="fx-q">Which of these must be reported?</b><div class="fx-o"><i></i>A gift worth 20 euros</div><div class="fx-o on"><i></i>A gift worth 400 euros</div><div class="fx-o"><i></i>A branded pen</div><div class="fx-f">Next question</div></div></div><div class="fx-p" data-i="3"><div class="fx-fc"><div class="fx-card b"></div><div class="fx-card m"></div><div class="fx-card t"><small>Question</small><b>When must a suspicious transaction be reported?</b><span>Tap to flip</span></div><div class="fx-btns"><span>Review again</span><span class="p">I know this</span></div></div></div><div class="fx-p" data-i="4"><div class="fx-ph"><div class="fx-phone"><span class="fx-notch"></span><small>Lesson 2 of 6 &middot; 3 min</small><b>Spotting a phishing email</b><div class="fx-o on"><i></i>Report it to IT</div><div class="fx-o"><i></i>Reply to confirm</div><div class="fx-pbtn">Continue</div></div></div></div><div class="fx-p" data-i="5"><div class="fx-v"><div class="fx-scr"><span class="fx-pl"></span><div class="fx-cap">Today we are covering what counts as a conflict of interest.</div></div><div class="fx-langs"><span class="on">English</span><span>Fran&ccedil;ais</span><span>Deutsch</span><span>Espa&ntilde;ol</span><span>Nederlands</span></div></div></div></div></div>
+<script>(function(){var r=document.querySelector('.fmt .fx');if(!r)return;var b=[].slice.call(r.querySelectorAll('.fx-b')),p=[].slice.call(r.querySelectorAll('.fx-p'));function go(i){b.forEach(function(x,n){x.classList.toggle('on',n===i)});p.forEach(function(x,n){x.classList.toggle('on',n===i)})}b.forEach(function(x,n){x.addEventListener('click',function(){go(n)});x.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches)go(n)})})})();</script></div>
 </div>
 </section>
 <!-- 07 AUDIT-READY PROOF · list + audit pack that builds itself (records drop into the folder) -->
