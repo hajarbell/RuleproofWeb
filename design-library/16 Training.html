@@ -2855,6 +2855,14 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 #help .hc img{animation:hcfloat 6s ease-in-out infinite}
 @keyframes hcfloat{50%{transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){#help.hca .hc{opacity:1;transform:none;transition:none}#help .hc img{animation:none}}
+#help{padding-top:56px!important;padding-bottom:56px!important}
+#help .head .h2{font-size:clamp(28px,2.8vw,40px)!important}#help .head p{font-size:16px!important}
+#help .hg{gap:14px!important;margin-top:28px!important}
+#help .hc{padding:20px 22px!important;min-height:0!important;border-radius:18px!important;gap:12px!important}
+#help .hc .hic{width:38px!important;height:38px!important;margin-bottom:12px!important}#help .hc .hic svg{width:19px!important;height:19px!important}
+#help .hc h3{font-size:20px!important;margin-bottom:6px!important}#help .hc p{font-size:14px!important;line-height:1.5!important}
+#help .hc img{max-height:210px!important;width:auto!important;justify-self:center}
+#help .hc>div:last-child:not(:first-child){transform:scale(.92);transform-origin:center}
 @media(max-width:640px){#help{margin:0 8px;border-radius:20px}}
 </style>
 <script>(function(){var h=document.getElementById('help');if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;h.classList.add('hca');var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){h.classList.add('hcin');io.disconnect()}},{threshold:.15});io.observe(h);setTimeout(function(){h.classList.add('hcin')},4000)})();</script><div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><h3>Short enough to fit into the day.</h3><p>Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p></div><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div>
@@ -2875,15 +2883,14 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </div>
 <style>
 .fmb{background:#fff;padding:56px 0 24px}
-.fmb-card{display:flex;align-items:center;gap:48px;border:2px solid transparent;border-radius:26px;padding:34px 40px;background:linear-gradient(100deg,#F4F7FF,#F3F0FF 60%,#EAF7FF) padding-box,linear-gradient(100deg,#3450F0,#8F7BFF 40%,#6FD3FF 70%,#3450F0) border-box;background-size:100% 100%,220% 100%}
-.fmb-card h2{flex:0 0 400px;margin:0;font-size:27px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#151433}
+.fmb-card{display:flex;align-items:center;gap:48px;border-radius:26px;padding:38px 44px;color:#fff;border:1px solid rgba(157,180,255,.22);background:radial-gradient(ellipse 55% 140% at 100% 0%,rgba(80,104,255,.45),transparent 70%),linear-gradient(135deg,#151433,#0B0C26);box-shadow:0 30px 60px -36px rgba(11,12,38,.7)}
+.fmb-card h2{flex:0 0 400px;margin:0;font-size:27px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
 .fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:10px}
-.fmb-pills span{padding:10px 17px;border-radius:99px;background:#fff;border:1px solid #E3E8F5;font-size:15px;font-weight:500;color:#4A4D6E;box-shadow:0 8px 16px -12px rgba(21,20,51,.4)}
-@media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}.fmb-card{animation:fmb-b 9s ease-in-out infinite alternate}}
-.fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#3450F0;align-self:center;padding:0 2px}
-.fmb-pills .fmb-hl{border-color:#3450F0;background:#EEF2FF;color:#2A3FC9;font-weight:600}
+.fmb-pills span{padding:10px 17px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(157,180,255,.28);font-size:15px;font-weight:500;color:#E6ECFF}
+@media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}}
+.fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#9DB4FF;align-self:center;padding:0 2px}
+.fmb-pills .fmb-hl{background:#3450F0;border-color:#3450F0;color:#fff;font-weight:600}
 @keyframes fmb-in{from{opacity:0;transform:translateY(8px)}}
-@keyframes fmb-b{from{background-position:0 0,0 0}to{background-position:0 0,100% 0}}
 @media(max-width:900px){.fmb-card{flex-direction:column;align-items:flex-start;gap:20px;padding:26px 22px}.fmb-card h2{flex:none;font-size:23px}}
 </style>
 </section>
