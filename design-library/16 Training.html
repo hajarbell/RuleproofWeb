@@ -2837,7 +2837,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </style>
 <div class="hg">
 <style id="hc-first">
-#help{margin:0 16px;border-radius:28px;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
+#help{max-width:1320px;margin:16px auto!important;border-radius:28px;background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)!important;overflow:hidden}
 #help .head .h2{color:#fff}#help .head p{color:#B9C8EC}
 #help .hc{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02))!important;border:1px solid rgba(157,180,255,.22)!important;box-shadow:none}
 #help .hc:hover{border-color:rgba(157,180,255,.45)!important;box-shadow:0 28px 52px -28px rgba(0,0,0,.7)}
@@ -2863,7 +2863,7 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 #help .hc h3{font-size:20px!important;margin-bottom:6px!important}#help .hc p{font-size:14px!important;line-height:1.5!important}
 #help .hc img{max-height:210px!important;width:auto!important;justify-self:center}
 #help .hc>div:last-child:not(:first-child){transform:scale(.92);transform-origin:center}
-@media(max-width:640px){#help{margin:0 8px;border-radius:20px}}
+@media(max-width:1352px){#help{margin:16px 16px!important}}@media(max-width:640px){#help{margin:8px!important;border-radius:20px}}
 </style>
 <script>(function(){var h=document.getElementById('help');if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;h.classList.add('hca');var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){h.classList.add('hcin');io.disconnect()}},{threshold:.15});io.observe(h);setTimeout(function(){h.classList.add('hcin')},4000)})();</script><div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><h3>Short enough to fit into the day.</h3><p>Short enough to complete between meetings or on the morning commute, without blocking an hour of the day.</p></div><div class="hv"><img alt="Phone showing Lesson complete and +1 skill" src="../assets/about/training-phone-lesson-complete.png" loading="lazy"/></div></div>
 <div class="hc w3"><div><span class="hic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="3"/><path d="M8 11v3M6.5 12.5h3M15.5 11.5h.01M17.5 13.5h.01"/></svg></span><h3>Practise decisions, not just recall.</h3><p>Learning alone doesn't show how someone will react. Real-life scenarios ask people to use their judgment and apply what they've learned.</p></div><div class="hv"><div class="mini"><b>What do you do next?</b><div style="margin-top:8px"><div class="opt"><i></i>Ignore it, the client is long-standing</div><div class="opt on"><i></i>Report it to the compliance team</div><div class="opt"><i></i>Wait to see if it happens again</div></div></div></div></div>
@@ -2882,11 +2882,11 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </div>
 </div>
 <style>
-.fmb{background:#fff;padding:56px 0 24px}
-.fmb-card{display:flex;align-items:center;gap:48px;border-radius:26px;padding:38px 44px;color:#fff;border:1px solid rgba(157,180,255,.22);background:radial-gradient(ellipse 55% 140% at 100% 0%,rgba(80,104,255,.45),transparent 70%),linear-gradient(135deg,#151433,#0B0C26);box-shadow:0 30px 60px -36px rgba(11,12,38,.7)}
-.fmb-card h2{flex:0 0 400px;margin:0;font-size:27px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
-.fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:10px}
-.fmb-pills span{padding:10px 17px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(157,180,255,.28);font-size:15px;font-weight:500;color:#E6ECFF}
+.fmb{background:#fff;padding:24px 0 16px}
+.fmb-card{display:flex;align-items:center;gap:32px;border-radius:20px;padding:24px 32px;color:#fff;border:1px solid rgba(157,180,255,.22);background:radial-gradient(ellipse 55% 60% at 12% 0%,rgba(80,104,255,.32),transparent 70%),linear-gradient(135deg,#151433,#0B0C26)}
+.fmb-card h2{flex:0 0 300px;margin:0;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.025em;color:#fff}
+.fmb-pills{flex:1;display:flex;flex-wrap:wrap;gap:8px}
+.fmb-pills span{padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(157,180,255,.28);font-size:14px;font-weight:500;color:#E6ECFF}
 @media(prefers-reduced-motion:no-preference){.fmb-pills span{animation:fmb-in .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--k)*.06s)}}
 .fmb-plus{font-style:normal;font-weight:700;font-size:18px;color:#9DB4FF;align-self:center;padding:0 2px}
 .fmb-pills .fmb-hl{background:#3450F0;border-color:#3450F0;color:#fff;font-weight:600}
@@ -2951,16 +2951,6 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <script>(function(){var r=document.getElementById("pf3");if(!r)return;var c=[].slice.call(r.children),d=[].slice.call(r.parentNode.querySelectorAll(".pf3-dots button")),a=0,t,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;function go(n){a=(n+c.length)%c.length;c.forEach(function(e,i){var o=(i-a+c.length)%c.length;e.setAttribute("data-o",o==0?0:o==1?1:-1)});d.forEach(function(b,i){b.setAttribute("aria-selected",i==a)})}function run(){if(rm)return;clearInterval(t);t=setInterval(function(){go(a+1)},4200)}d.forEach(function(b,i){b.addEventListener("click",function(){go(i);run()})});r.parentNode.addEventListener("mouseenter",function(){clearInterval(t)});r.parentNode.addEventListener("mouseleave",run);run()})()</script>
 </section>
 
-<!-- 13 WHITE-LABEL · banner -->
-<section class="wlb-sec" data-n="13">
-<div class="wrap">
-<div class="wlb">
-<div><h2>Your training. Your brand. Powered by RuleProof.</h2>
-<p>Deliver training under your brand, without building the tech.</p></div>
-<a class="btn btn-primary" href="#">Become a RuleProof partner</a>
-</div>
-</div>
-</section>
 <!-- 09 HOW IT WORKS · product film: one big window plays the 7 steps, chapter scrubber below -->
 <section class="dark film hw3" data-n="9" id="how">
 <div class="wrap">
