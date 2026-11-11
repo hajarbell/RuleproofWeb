@@ -2807,13 +2807,16 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </section>
 <!-- 05 HOW CAN RULEPROOF HELP · rail + panel -->
 <section class="lgb" aria-label="Trusted by"><style>
-.lgb{padding:56px 24px 48px;background:#fff;text-align:center}
-.lgb p{margin:0 0 26px;font-size:15px;font-weight:600;letter-spacing:.02em;color:#4A4D6E}
-.lgb .lgb-r{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px 64px;max-width:960px;margin:0 auto}
-.lgb img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s}
-.lgb img:hover{filter:none;opacity:1}
-@media(max-width:640px){.lgb{padding:40px 16px 32px}.lgb img{height:30px}.lgb .lgb-r{gap:22px 36px}}
-</style><p>Trusted by teams that need training to stick</p><div class="lgb-r"><img alt="Innovation Experts Real Estate Institute" src="../assets/about/logo-innovate.png"/><img alt="ADGM" src="../assets/about/logo-adgm.png"/><img alt="ThinkProp" src="../assets/about/logo-thinkprop.png"/><img alt="San Diego MLS" src="../assets/about/logo-sandiegomls.png"/></div></section>
+.lgb{padding:56px 0 52px;background:#fff;text-align:center}
+.lgb p{margin:0 0 30px;font-size:15px;font-weight:600;letter-spacing:.02em;color:#4A4D6E}
+.lgb .lgb-mq{overflow:hidden;max-width:890px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.lgb .lgb-track{display:flex;align-items:center;gap:96px;width:max-content;animation:lgbmq 30s linear infinite}
+.lgb .lgb-track img{height:44px;width:auto;filter:grayscale(1);opacity:.85;mix-blend-mode:multiply}
+.lgb .lgb-mq:hover .lgb-track{animation-play-state:paused}
+@keyframes lgbmq{to{transform:translateX(-33.333%)}}
+@media(max-width:960px){.lgb .lgb-track{gap:56px}.lgb .lgb-track img{height:34px}}
+@media(prefers-reduced-motion:reduce){.lgb .lgb-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.lgb .lgb-track img[aria-hidden]{display:none}}
+</style><p>Trusted by leading companies</p><div class="lgb-mq"><div class="lgb-track"><img alt="Innovation Experts Real Estate Institute" src="../assets/about/logo-innovate.png"/><img alt="ADGM" src="../assets/about/logo-adgm.png"/><img alt="ThinkProp" src="../assets/about/logo-thinkprop.png"/><img alt="San Diego MLS" src="../assets/about/logo-sandiegomls.png"/><img alt="Innovation Experts Real Estate Institute" aria-hidden="true" src="../assets/about/logo-innovate.png"/><img alt="ADGM" aria-hidden="true" src="../assets/about/logo-adgm.png"/><img alt="ThinkProp" aria-hidden="true" src="../assets/about/logo-thinkprop.png"/><img alt="San Diego MLS" aria-hidden="true" src="../assets/about/logo-sandiegomls.png"/><img alt="Innovation Experts Real Estate Institute" aria-hidden="true" src="../assets/about/logo-innovate.png"/><img alt="ADGM" aria-hidden="true" src="../assets/about/logo-adgm.png"/><img alt="ThinkProp" aria-hidden="true" src="../assets/about/logo-thinkprop.png"/><img alt="San Diego MLS" aria-hidden="true" src="../assets/about/logo-sandiegomls.png"/></div></div></section>
 <section data-n="5" id="help">
 <div class="wrap">
 <div class="head">
