@@ -2967,13 +2967,13 @@ body .proof2.pf3.pf3[data-n]{max-width:none;width:auto;margin:0!important;border
 <section class="proof2 pf3" data-n="7">
 <div class="wrap">
 <div class="pf3-head"><h2 class="h2">Stay audit ready with exportable packs</h2><p>Once the training is done, the proof is already there. Export audit packs, sign-offs, certifications and any relevant records in just minutes.</p><a class="btn btn-primary" href="#demo">See RuleProof in action</a></div>
-<div class="pf3-one"><div class="pf3-panel"><div class="ap" id="ap"><div class="ap-screen" id="apScr"><div class="ap-stage" id="apStage"><div class="ap-cam" id="apCam"><div class="ap-app" id="apApp">
+<div class="pf3-one"><div class="pf3-panel"><div class="ap" id="ap"><div class="ap-screen" id="apScr"><div class="ap-stage" id="apStage"><div class="ap-cam" id="apCam"><div class="ap-bar"><span class="ap-dots"><i></i><i></i><i></i></span><div class="ap-crumb">Bank<em>/</em><b>Audit Packs</b></div><div class="ap-bar-r"><span class="ap-lang">English</span><span class="ap-bell">16</span></div></div><div class="ap-app" id="apApp">
 <div class="ap-top"><div><b>Audit packs</b><small>Generate and download device-local audit evidence packs.</small></div><button type="button" class="ap-dark" id="apGen" tabindex="-1">Generate pack</button></div>
 <div class="ap-card"><div class="ap-h">Generated packs</div><div class="ap-th"><span>Scope</span><span>Date range</span><span>Status</span><span>Created</span><span>Actions</span></div><div id="apRows"><div class="ap-tr"><span>Meridian Financial Group</span><span>01.10.2026 – 09.11.2026</span><span>Ready</span><span>09.11.2026</span><span><i class="ap-btn">Download</i></span></div></div></div>
 <div class="ap-card ap-auto"><div class="ap-h">Automatic generation</div><p>Schedule preferences are local; no background generation service is connected.</p><div class="ap-row"><b>Enable scheduled generation</b><i class="ap-tg" id="apTg"></i></div><div class="ap-row"><b>Frequency</b><i class="ap-sel">Monthly on the 1st</i></div><div class="ap-save"><i class="ap-dark" id="apSave">Save</i></div></div>
 </div>
 <div class="ap-ov" id="apOv"><div class="ap-modal"><div class="ap-mh"><b>Generate pack</b><i class="ap-x">×</i></div><div class="ap-mb"><div class="ap-dates"><div><small>Start date</small><i id="apS" class="ap-in"></i></div><div><small>End date</small><i class="ap-in">11.11.2026</i></div></div><p>Includes controls, certifications, completion records, and governance decisions.</p></div><div class="ap-mf"><i class="ap-btn">Cancel</i><i class="ap-dark" id="apOk">Generate</i></div></div></div>
-<i class="ap-rip" id="apRip"></i>
+<div class="ap-ruli"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Ruli AI</div><i class="ap-rip" id="apRip"></i>
 <i class="ap-cur" id="apCur"><svg viewBox="0 0 20 20"><path d="M3 2l13 7-5.5 1.6L8 16z" fill="#151433" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg></i>
 </div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="apGlass" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter></svg><div class="ap-chip" id="apChip"><em id="apChipN">1</em><span id="apChipT"></span></div>
@@ -3329,6 +3329,23 @@ body .proof2.pf3.pf3[data-n]::before{content:"";position:absolute;inset:0;z-inde
 @supports (backdrop-filter:url(#apGlass)){.ap-chip,.ap-toast{-webkit-backdrop-filter:url(#apGlass) blur(2px) saturate(1.9) brightness(1.08);backdrop-filter:url(#apGlass) blur(2px) saturate(1.9) brightness(1.08)}}
 .ap-chip em{color:#fff!important;text-shadow:none;background:linear-gradient(135deg,#5068FF,#3450F0);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 4px 10px -3px rgba(52,80,240,.6)}
 .ap-toast svg{background:linear-gradient(135deg,#2FBF7F,#1E9E62);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 4px 10px -3px rgba(30,158,98,.6)}
+
+/* premium pass: app chrome, halo, hairline frame, layered depth */
+.ap-bar{position:absolute;left:0;right:0;top:0;height:46px;z-index:3;display:flex;align-items:center;gap:16px;padding:0 20px;background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #E8ECF7;font-size:13px;color:#68718B}
+.ap-dots{display:flex;gap:6px}.ap-dots i{width:10px;height:10px;border-radius:50%;background:#E3E7F3}
+.ap-crumb{display:flex;gap:7px;align-items:center}.ap-crumb em{font-style:normal;color:#B7BED3}.ap-crumb b{color:#151433;font-weight:600}
+.ap-bar-r{margin-left:auto;display:flex;gap:8px;align-items:center}
+.ap-lang,.ap-bell{border:1px solid #E3E8F5;background:#fff;border-radius:9px;padding:5px 11px;font-weight:500;color:#4A4D6E;font-size:12px}
+.ap-lang::after{content:"";display:inline-block;width:5px;height:5px;border-right:1.5px solid #8A90AB;border-bottom:1.5px solid #8A90AB;transform:rotate(45deg);margin:0 0 3px 8px}
+.ap-bell{position:relative;padding:5px 9px;font-size:11px;font-weight:700;color:#B45309;background:#FFF6E8;border-color:#FBE3BC}
+.ap-app{padding-top:64px!important}
+.ap-ruli{position:absolute;right:20px;bottom:18px;z-index:3;display:flex;align-items:center;gap:8px;padding:9px 15px 9px 11px;border-radius:99px;background:#151433;color:#fff;font-weight:600;font-size:13px;box-shadow:0 14px 28px -10px rgba(21,20,51,.55)}
+.ap-ruli svg{width:16px;height:16px;fill:#9DB4FF}
+.proof2 #ap.ap{box-shadow:0 0 0 1px rgba(21,20,51,.07),0 2px 4px rgba(21,20,51,.04),0 18px 40px -16px rgba(21,20,51,.2),0 50px 100px -40px rgba(52,80,240,.38)!important}
+.pf3-panel{position:relative;isolation:isolate}
+.pf3-panel::before{content:"";position:absolute;inset:-50px 4% -70px;z-index:-1;pointer-events:none;background:radial-gradient(55% 60% at 50% 48%,rgba(80,104,255,.2),transparent 72%),radial-gradient(30% 35% at 85% 20%,rgba(157,180,255,.28),transparent 70%)}
+.ap-tabs button{font-size:13px;letter-spacing:-.005em}
+.ap-top b{letter-spacing:-.025em}
 @media(max-width:640px){.ap-tabs button span{display:none}.ap-tabs button{padding:12px 4px 14px}}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
@@ -3795,15 +3812,15 @@ function unzoom(){cam.style.transform="scale(1)"}
 function toast(t){tbt.textContent=t;tb.classList.add("on");later(function(){tb.classList.remove("on")},1700)}
 function showChip(n){chipN.textContent=n+1;chipT.textContent=titles[n];chip.classList.add("on");later(function(){chip.classList.remove("on")},2000)}
 function newRow(c){return '<div class="ap-tr'+(c?' new':'')+'"><span>Meridian Financial Group</span><span>03.09.2026 \u2013 11.11.2026</span><span>Ready</span><span>11.11.2026</span><span><i class="ap-btn" id="apDl">Download</i></span></div>'}
-function scroll(){sy=-Math.max(0,app.scrollHeight-stage.clientHeight);app.style.transform="translateY("+sy+"px)"}
+function scroll(){sy=-Math.max(0,app.scrollHeight-cam.clientHeight);app.style.transform="translateY("+sy+"px)"}
 function reset(n){app.style.transition="none";sy=0;app.style.transform="translateY(0)";void app.offsetWidth;app.style.transition="";cam.style.transition="none";cam.style.transform="scale(1)";void cam.offsetWidth;cam.style.transition="";ov.classList.remove("on");tg.classList.remove("on");inS.textContent="";inS.classList.remove("type");tb.classList.remove("on");chip.classList.remove("on");rows.innerHTML=(n>=2?newRow(false):"")+OLD;cur.style.transition="none";cur.style.opacity=0;cur.style.transform="translate(760px,300px)";void cur.offsetWidth;cur.style.transition=""}
 function final(n){reset(n);if(n===1){ov.classList.add("on");inS.textContent="03.09.2026"}if(n===3){scroll();tg.classList.add("on")}}
 function type(txt,i){if(i>txt.length){inS.classList.remove("type");return}inS.textContent=txt.slice(0,i);later(function(){type(txt,i+1)},75)}
 function play(n){clear();step=n;tabs.forEach(function(t,i){t.setAttribute("aria-selected",i===n)});ap.classList.remove("run");if(rm||!live){final(n);return}void ap.offsetWidth;ap.classList.add("run");reset(n===2?0:n);var g=$("apGen");showChip(n);
-if(n===0){later(function(){to(g)},700);later(function(){zoom(g,1.28,.7,.3)},1300);later(function(){click(g)},2300);later(unzoom,3400)}
-if(n===1){ov.classList.add("on");later(function(){to(inS,.3,.6)},500);later(function(){zoom(inS,1.3,.8,.5)},1000);later(function(){inS.classList.add("type");type("03.09.2026",1)},1700);later(function(){to($("apOk"))},3200);later(function(){zoom($("apOk"),1.3,.2,.4)},3300);later(function(){click($("apOk"))},4200);later(function(){ov.classList.remove("on");unzoom()},4600)}
-if(n===2){later(function(){rows.insertAdjacentHTML("afterbegin",newRow(true))},700);later(function(){zoom($("apDl"),1.22,.7,.4);to($("apDl"))},1700);later(function(){var d=$("apDl");click(d);d.textContent="Downloaded"},3000);later(function(){toast("Audit pack saved")},3200);later(unzoom,4500)}
-if(n===3){rows.innerHTML=newRow(false)+OLD;later(scroll,600);later(function(){to(tg,.5,.5);zoom(tg,1.25,.5,.5)},1700);later(function(){click(tg);tg.classList.add("on")},2700);later(function(){to($("apSave"));zoom($("apSave"),1.25,.5,.5)},3600);later(function(){click($("apSave"));toast("Schedule saved")},4600);later(unzoom,5500)}}
+if(n===0){later(function(){to(g)},700);later(function(){zoom(g,1.14,.7,.3)},1300);later(function(){click(g)},2300);later(unzoom,3400)}
+if(n===1){ov.classList.add("on");later(function(){to(inS,.3,.6)},500);later(function(){zoom(inS,1.14,.8,.5)},1000);later(function(){inS.classList.add("type");type("03.09.2026",1)},1700);later(function(){to($("apOk"))},3200);later(function(){zoom($("apOk"),1.14,.2,.4)},3300);later(function(){click($("apOk"))},4200);later(function(){ov.classList.remove("on");unzoom()},4600)}
+if(n===2){later(function(){rows.insertAdjacentHTML("afterbegin",newRow(true))},700);later(function(){zoom($("apDl"),1.12,.7,.4);to($("apDl"))},1700);later(function(){var d=$("apDl");click(d);d.textContent="Downloaded"},3000);later(function(){toast("Audit pack saved")},3200);later(unzoom,4500)}
+if(n===3){rows.innerHTML=newRow(false)+OLD;later(scroll,600);later(function(){to(tg,.5,.5);zoom(tg,1.12,.5,.5)},1700);later(function(){click(tg);tg.classList.add("on")},2700);later(function(){to($("apSave"));zoom($("apSave"),1.12,.5,.5)},3600);later(function(){click($("apSave"));toast("Schedule saved")},4600);later(unzoom,5500)}}
 function advance(){play((step+1)%4)}
 ap.addEventListener("animationend",function(e){if(e.animationName==="ap-prog")advance()});
 tabs.forEach(function(t,i){t.addEventListener("click",function(){live=true;play(i)})});
