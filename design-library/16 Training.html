@@ -2980,7 +2980,7 @@ body .proof2.pf3.pf3[data-n]{max-width:none;width:auto;margin:0!important;border
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="apGlass" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter></svg><div class="ap-chip" id="apChip"><em id="apChipN">1</em><span id="apChipT"></span></div>
 <div class="ap-toast" id="apToast"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span id="apToastT"></span></div>
 </div></div>
-<div class="ap-tabs" id="apTabs" role="tablist"><button type="button" role="tab" aria-selected="true"><b>1</b><span>Open</span><s></s></button><button type="button" role="tab" aria-selected="false"><b>2</b><span>Pick a period</span><s></s></button><button type="button" role="tab" aria-selected="false"><b>3</b><span>Download</span><s></s></button><button type="button" role="tab" aria-selected="false"><b>4</b><span>Schedule</span><s></s></button></div>
+<div class="ap-tabs" id="apTabs" role="tablist"><button type="button" role="tab" aria-label="Open" aria-selected="true"><b>1</b><span>Open</span><s></s></button><button type="button" role="tab" aria-label="Pick a period" aria-selected="false"><b>2</b><span>Pick a period</span><s></s></button><button type="button" role="tab" aria-label="Download" aria-selected="false"><b>3</b><span>Download</span><s></s></button><button type="button" role="tab" aria-label="Schedule" aria-selected="false"><b>4</b><span>Schedule</span><s></s></button></div>
 </div></div></div></div></div></div></div></div>
 </div>
 <style id="pf3-css">
@@ -3356,6 +3356,16 @@ body .proof2.pf3.pf3[data-n]::before{content:"";position:absolute;inset:0;z-inde
 @keyframes ap-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.ap-tabs button[aria-selected=true] s{transform:scaleX(1)!important}}
 .ap-tabs button{padding-bottom:20px!important}
+
+/* labels removed: one slim progress line made of 4 segments */
+.ap-tabs{display:grid!important;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 20px;border-top:1px solid #E8ECF7;background:#fff}
+.ap-tabs button{height:26px!important;padding:0!important;border:0!important;background:none!important;display:block!important;position:relative}
+.ap-tabs button b,.ap-tabs button span{display:none!important}
+.ap-tabs button::after{left:0!important;right:0!important;bottom:auto!important;top:11px;height:4px!important;border-radius:4px}
+.ap-tabs button s{left:0!important;right:0!important;bottom:auto!important;top:11px;height:4px!important;border-radius:4px}
+.ap-tabs button.done s{transform:scaleX(1)!important;animation:none!important}
+@media(hover:hover) and (pointer:fine){.ap-tabs button:not([aria-selected=true]):not(.done):hover::after{background:#D5DBEE}}
+.ap-tabs button:focus-visible{outline-offset:2px!important}
 @media(max-width:640px){.ap-tabs button span{display:none}.ap-tabs button{padding:12px 4px 14px}}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
@@ -3826,7 +3836,7 @@ function scroll(){sy=-Math.max(0,app.scrollHeight-cam.clientHeight);app.style.tr
 function reset(n){app.style.transition="none";sy=0;app.style.transform="translateY(0)";void app.offsetWidth;app.style.transition="";cam.style.transition="none";cam.style.transform="scale(1)";void cam.offsetWidth;cam.style.transition="";ov.classList.remove("on");tg.classList.remove("on");inS.textContent="";inS.classList.remove("type");tb.classList.remove("on");chip.classList.remove("on");rows.innerHTML=(n>=2?newRow(false):"")+OLD;cur.style.transition="none";cur.style.opacity=0;cur.style.transform="translate(760px,300px)";void cur.offsetWidth;cur.style.transition=""}
 function final(n){reset(n);if(n===1){ov.classList.add("on");inS.textContent="03.09.2026"}if(n===3){scroll();tg.classList.add("on")}}
 function type(txt,i){if(i>txt.length){inS.classList.remove("type");return}inS.textContent=txt.slice(0,i);later(function(){type(txt,i+1)},75)}
-function play(n){clear();step=n;tabs.forEach(function(t,i){t.setAttribute("aria-selected",i===n)});ap.classList.remove("run");if(rm||!live){final(n);return}void ap.offsetWidth;ap.classList.add("run");reset(n===2?0:n);var g=$("apGen");showChip(n);
+function play(n){clear();step=n;tabs.forEach(function(t,i){t.setAttribute("aria-selected",i===n);t.classList.toggle("done",i<n)});ap.classList.remove("run");if(rm||!live){final(n);return}void ap.offsetWidth;ap.classList.add("run");reset(n===2?0:n);var g=$("apGen");showChip(n);
 if(n===0){later(function(){to(g)},700);later(function(){zoom(g,1.08,.7,.3)},1300);later(function(){click(g)},2300);later(unzoom,3400)}
 if(n===1){ov.classList.add("on");later(function(){to(inS,.3,.6)},500);later(function(){zoom(inS,1.08,.8,.5)},1000);later(function(){inS.classList.add("type");type("03.09.2026",1)},1700);later(function(){to($("apOk"))},3200);later(function(){zoom($("apOk"),1.08,.2,.4)},3300);later(function(){click($("apOk"))},4200);later(function(){ov.classList.remove("on");unzoom()},4600)}
 if(n===2){later(function(){rows.insertAdjacentHTML("afterbegin",newRow(true))},700);later(function(){zoom($("apDl"),1.07,.7,.4);to($("apDl"))},1700);later(function(){var d=$("apDl");click(d);d.textContent="Downloaded"},3000);later(function(){toast("Audit pack saved")},3200);later(unzoom,4500)}
