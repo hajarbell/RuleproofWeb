@@ -3348,6 +3348,15 @@ body .proof2.pf3.pf3[data-n]::before{content:"";position:absolute;inset:0;z-inde
 .pf3-panel::before{content:"";position:absolute;inset:-50px 4% -70px;z-index:-1;pointer-events:none;background:radial-gradient(55% 60% at 50% 48%,rgba(80,104,255,.2),transparent 72%),radial-gradient(30% 35% at 85% 20%,rgba(157,180,255,.28),transparent 70%)}
 .ap-tabs button{font-size:13px;letter-spacing:-.005em}
 .ap-top b{letter-spacing:-.025em}
+
+/* step progress line: grey track under every tab, blue fill runs until the step ends */
+.ap-tabs button::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:3px;border-radius:3px;background:#E8ECF7}
+.ap-tabs button s{left:12px!important;right:12px;bottom:6px!important;width:auto!important;height:3px!important;border-radius:3px;z-index:1;background:linear-gradient(90deg,#5068FF,#3450F0)!important;transform:scaleX(0)!important}
+.ap-tabs button[aria-selected=true] s{transform:scaleX(0)!important}
+.ap.run .ap-tabs button[aria-selected=true] s{transform:scaleX(1)!important;animation:ap-line 6.4s linear both!important}
+@keyframes ap-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.ap-tabs button[aria-selected=true] s{transform:scaleX(1)!important}}
+.ap-tabs button{padding-bottom:20px!important}
 @media(max-width:640px){.ap-tabs button span{display:none}.ap-tabs button{padding:12px 4px 14px}}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
@@ -3827,7 +3836,7 @@ function advance(){play((step+1)%4)}
 ap.addEventListener("animationend",function(e){if(e.animationName==="ap-prog")advance()});
 tabs.forEach(function(t,i){t.addEventListener("click",function(){live=true;play(i)})});
 play(0);
-if("IntersectionObserver"in window&&!rm){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){live=true;play(0)}else{live=false;clear();ap.classList.remove("run")}},{threshold:.35});io.observe(ap)}
+if("IntersectionObserver"in window&&!rm){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){live=true;play(0)}else{live=false;clear();ap.classList.remove("run")}},{threshold:.12});io.observe(ap)}
 })();</script>
 
 </body>
