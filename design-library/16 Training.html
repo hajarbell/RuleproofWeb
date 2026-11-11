@@ -3852,7 +3852,7 @@ if(n===1){ov.classList.add("on");later(function(){to(inS,.3,.6)},500);later(func
 if(n===2){later(function(){rows.insertAdjacentHTML("afterbegin",newRow(true))},700);later(function(){zoom($("apDl"),1.07,.7,.4);to($("apDl"))},1700);later(function(){var d=$("apDl");click(d);d.textContent="Downloaded"},3000);later(function(){toast("Audit pack saved")},3200);later(unzoom,4500)}
 if(n===3){rows.innerHTML=newRow(false)+OLD;later(scroll,600);later(function(){to(tg,.5,.5);zoom(tg,1.07,.5,.5)},1700);later(function(){click(tg);tg.classList.add("on")},2700);later(function(){to($("apSave"));zoom($("apSave"),1.07,.5,.5)},3600);later(function(){click($("apSave"));toast("Schedule saved")},4600);later(unzoom,5500)}}
 function advance(){play((step+1)%4)}
-ap.addEventListener("animationend",function(e){if(e.animationName==="ap-prog")advance()});
+ap.addEventListener("animationend",function(e){if((e.animationName==="ap-line"||e.animationName==="ap-prog"))advance()});
 tabs.forEach(function(t,i){t.addEventListener("click",function(){live=true;play(i)})});
 play(0);
 if("IntersectionObserver"in window&&!rm){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){live=true;play(0)}else{live=false;clear();ap.classList.remove("run")}},{threshold:.12});io.observe(ap)}
