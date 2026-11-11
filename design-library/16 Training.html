@@ -3174,7 +3174,7 @@ body .proof2.pf3.pf3[data-n]{max-width:none;width:auto;margin:0!important;border
 .cr-s{transform:scale(.9)}
 .cr-s[data-o="1"]{transform:translateX(70%) rotateY(-14deg) scale(.72);opacity:.5}
 .cr-s[data-o="-1"]{transform:translateX(-70%) rotateY(14deg) scale(.72);opacity:.5}
-@media(prefers-reduced-motion:no-preference){@keyframes cr-float{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:no-preference){@keyframes cr-float{from{transform:translateY(0)}to{transform:translateY(-6px)}}}
 @media(max-width:900px){.cr-stage{height:330px}}
 /* one space: all training records in a single card */
 .cr-one{width:min(560px,calc(100% - 48px));margin:0 auto 18px}
@@ -3331,6 +3331,11 @@ body .proof2.pf3.pf3[data-n]::before{content:"";position:absolute;inset:0;z-inde
 @keyframes ap-prog{from{transform:scaleX(0)}}
 .ap-tabs button:focus-visible{outline:2px solid #3450F0;outline-offset:-3px}
 .ap-cap{text-align:center;color:#4A4D6E;font-size:15px!important;max-width:none!important;margin:16px 0 0;min-height:24px}
+
+/* glass toast + step chip */
+.ap-chip,.ap-toast{background:rgba(255,255,255,.62)!important;color:#151433!important;-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(255,255,255,.85);box-shadow:0 12px 32px -10px rgba(21,20,51,.28),inset 0 1px 0 rgba(255,255,255,.9)!important}
+.ap-chip em{color:#fff!important;background:linear-gradient(135deg,#5068FF,#3450F0);box-shadow:0 4px 10px -3px rgba(52,80,240,.6)}
+.ap-toast svg{background:linear-gradient(135deg,#2FBF7F,#1E9E62);box-shadow:0 4px 10px -3px rgba(30,158,98,.6)}
 @media(max-width:640px){.ap-tabs button span{display:none}.ap-tabs button{padding:12px 4px 14px}}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
