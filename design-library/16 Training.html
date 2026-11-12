@@ -2978,7 +2978,7 @@ body .proof2.pf3.pf3[data-n]{max-width:none;width:auto;margin:0!important;border
 <section class="proof2 pf3" data-n="7">
 <div class="wrap">
 <div class="pf3-head"><h2 class="h2">Stay audit ready with exportable packs</h2><p>Once the training is done, the proof is already there. Export audit packs, sign-offs, certifications and any relevant records in just minutes.</p><a class="btn btn-primary" href="#demo">See RuleProof in action</a></div>
-<div class="pf3-one"><div class="pf3-panel"><div class="ap" id="ap"><div class="ap-steps" id="apTabs" role="tablist"><div class="ap-trk"><i class="ap-fill" id="apFill"></i></div><button type="button" role="tab" aria-label="Generate" aria-selected="true"><b>1</b><span>Generate</span></button><button type="button" role="tab" aria-label="Period" aria-selected="false"><b>2</b><span>Period</span></button><button type="button" role="tab" aria-label="Download" aria-selected="false"><b>3</b><span>Download</span></button><button type="button" role="tab" aria-label="Schedule" aria-selected="false"><b>4</b><span>Schedule</span></button></div><div class="ap-screen" id="apScr"><div class="ap-stage" id="apStage"><div class="ap-cam" id="apCam">
+<div class="pf3-one"><div class="pf3-panel"><div class="ap" id="ap"><div class="ap-steps" id="apTabs" role="tablist"><div class="ap-trk"><i class="ap-fill" id="apFill"></i></div><button type="button" role="tab" aria-label="Generate" aria-selected="true"><b>1</b><span>Generate</span></button><button type="button" role="tab" aria-label="Dates" aria-selected="false"><b>2</b><span>Dates</span></button><button type="button" role="tab" aria-label="Download" aria-selected="false"><b>3</b><span>Download</span></button><button type="button" role="tab" aria-label="Schedule" aria-selected="false"><b>4</b><span>Schedule</span></button></div><div class="ap-screen" id="apScr"><div class="ap-stage" id="apStage"><div class="ap-cam" id="apCam">
 <div class="ap-bar"><span class="ap-dots"><i></i><i></i><i></i></span><div class="ap-crumb"><b>Audit Packs</b></div><div class="ap-bar-r"><span class="ap-lang">English</span></div></div>
 <div class="ap-app" id="apApp">
 <div class="ap-top"><div><b>Audit packs</b><small>Generate and download device-local audit evidence packs.</small></div><button type="button" class="ap-dark" id="apGen" tabindex="-1">Generate pack</button></div>
@@ -3364,6 +3364,15 @@ opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.23,1,.32,1),t
 .ap-toast{left:50%;top:62px;padding:11px 20px 11px 12px;font-weight:700;font-size:14px;transform:translate(-50%,-10px) scale(.96)}
 .ap-toast.on{opacity:1;transform:translate(-50%,0)}
 .ap-toast svg{flex:none;width:24px;height:24px;padding:5px;border-radius:50%;background:linear-gradient(135deg,#2FBF7F,#1E9E62);fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 5px 12px -3px rgba(30,158,98,.6)}
+
+/* shorter, centered glass note; toast moves to the bottom so they never collide */
+.ap-note{left:50%!important;right:auto;bottom:auto!important;top:60px!important;max-width:none!important;padding:8px 20px 8px 9px!important;border-radius:99px!important;transform:translate(-50%,-10px) scale(.96)!important;white-space:nowrap}
+.ap-note.on{transform:translate(-50%,0)!important}
+.ap-note small{display:none!important}
+.ap-note em{width:28px!important;height:28px!important;font-size:13px!important}
+.ap-note b{font-size:14.5px!important}
+.ap-toast{top:auto!important;bottom:24px!important;transform:translate(-50%,10px) scale(.96)!important}
+.ap-toast.on{transform:translate(-50%,0)!important}
 @media(max-width:640px){.ap-steps button span{display:none}.ap-note{max-width:78%}}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
@@ -3815,7 +3824,7 @@ host.style.setProperty('--rpw',Math.round(col+16+Math.min(124,Math.max(0,(innerW
 var pts=[[961,442],[1024,416],[1100,416],[1180,421],[1260,427],[1330,433],[1400,438],[1440,441],[1499,441],[1500,504],[1560,507],[1920,507]],homeH=507;for(var q=1;q<pts.length;q++){if(innerWidth<=pts[q][0]){var a=pts[q-1],c=pts[q];homeH=a[1]+(c[1]-a[1])*(Math.max(innerWidth,a[0])-a[0])/(c[0]-a[0]);break}}/* same height as the homepage hero mock */var H=Math.round(Math.max(txt.getBoundingClientRect().height,homeH));host.style.setProperty('--rph',H+'px');rp.classList.toggle('tp-more',H/parseFloat(host.style.getPropertyValue('--rpw'))>=.67);host.classList.remove('flat')}
 fit();addEventListener('resize',fit);addEventListener('load',fit)})();</script>
 <script>(function(){var ap=document.getElementById("ap");if(!ap)return;var $=function(i){return document.getElementById(i)},app=$("apApp"),cam=$("apCam"),scr=$("apScr"),ov=$("apOv"),cur=$("apCur"),rip=$("apRip"),rows=$("apRows"),tg=$("apTg"),nx=$("apNext"),tb=$("apToast"),tbt=$("apToastT"),note=$("apNote"),noteN=$("apNoteN"),noteT=$("apNoteT"),noteS=$("apNoteS"),fill=$("apFill"),inS=$("apS"),tabs=[].slice.call($("apTabs").querySelectorAll("button")),rm=matchMedia("(prefers-reduced-motion:reduce)").matches,T=[],step=0,live=false,sy=0,CW=980,CH=394;
-var titles=["Generate in one click","Choose the period","Download and share","Schedule it once"];
+var titles=["Generate in one click","Choose the dates","Download and share","Schedule it once"];
 var subs=["Build a complete audit pack from every record, instantly.","Controls, certifications, completion records and governance decisions, all included.","Hand your auditor a clean evidence pack in seconds.","Your audit packs will be ready on time, without doing it yourself."];
 var DUR=[5.6,8.2,6.2,9.8];
 var OLD=rows.innerHTML;
