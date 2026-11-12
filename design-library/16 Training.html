@@ -2807,22 +2807,42 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 </section>
 <!-- 05 HOW CAN RULEPROOF HELP · rail + panel -->
 
-<section class="s3" aria-label="How it works"><style>
-.s3{max-width:1320px;margin:24px auto 56px;border-radius:28px;padding:40px 44px 44px;color:#fff;overflow:hidden;position:relative;background:radial-gradient(ellipse 50% 90% at 100% 0%,rgba(255,255,255,.22),transparent 70%),radial-gradient(ellipse 40% 70% at 0% 100%,rgba(21,20,51,.28),transparent 70%),linear-gradient(135deg,#3450F0,#4C68FF)}
+<section class="s3" data-v="1" aria-label="How it works"><style>
+.s3{max-width:1320px;margin:24px auto 56px;padding:0}
 @media(max-width:1352px){.s3{margin:24px 16px 56px}}
-.s3 .s3-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;max-width:1080px;margin:0 auto;position:relative}
+.s3 .s3-t{display:flex;justify-content:center;gap:8px;margin-bottom:14px}
+.s3 .s3-t button{all:unset;cursor:pointer;padding:6px 14px;border-radius:99px;border:1px solid #DCE5FF;font-size:13px;font-weight:600;color:#4A4D6E}
+.s3 .s3-t button.on{background:#151433;border-color:#151433;color:#fff}
+.s3 .s3-b{border-radius:28px;padding:42px 44px 46px;position:relative;overflow:hidden;color:#fff;background:radial-gradient(ellipse 50% 90% at 100% 0%,rgba(130,150,255,.35),transparent 70%),linear-gradient(135deg,#2A3FD0,#1F2EA8)}
+.s3[data-v="2"] .s3-b{background:#fff;color:#151433;border:1px solid #DCE5FF;box-shadow:0 40px 70px -50px rgba(52,80,240,.55)}
+.s3[data-v="3"] .s3-b{background:#EEF2FF;color:#151433}
+.s3 .s3-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;max-width:1080px;margin:0 auto}
 .s3 .s3-i{position:relative}
-.s3 .s3-i:not(:last-child):after{content:"";position:absolute;top:22px;left:calc(100% - 4px);width:48px;border-top:2px dashed rgba(255,255,255,.45)}
+.s3 .s3-i:not(:last-child):after{content:"";position:absolute;top:22px;left:calc(100% - 4px);width:48px;border-top:2px dashed rgba(255,255,255,.4)}
+.s3[data-v="2"] .s3-i:after,.s3[data-v="3"] .s3-i:after{border-color:#B8C6F5}
 .s3 .s3-h{display:flex;align-items:center;gap:14px}
-.s3 .s3-n{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;color:#3450F0;display:grid;place-items:center;font-size:19px;font-weight:700}
+.s3 .s3-n{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;color:#2A3FD0;display:grid;place-items:center;font-size:19px;font-weight:700}
+.s3[data-v="2"] .s3-n,.s3[data-v="3"] .s3-n{background:#3450F0;color:#fff}
 .s3 .s3-h b{display:block;font-size:20px;font-weight:650;letter-spacing:-.01em}
-.s3 .s3-h span span{display:block;margin-top:2px;font-size:14px;color:rgba(255,255,255,.8)}
-.s3 .s3-c{margin-top:20px;background:#fff;color:#151433;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;box-shadow:0 22px 34px -20px rgba(11,12,38,.7)}
-.s3 .s3-c i{flex:none;width:32px;height:32px;border-radius:9px;background:#EEF2FF;color:#3450F0;display:grid;place-items:center;font-style:normal;font-size:15px}
-.s3 .s3-c em{margin-left:auto;font-style:normal;font-size:11px;font-weight:650;padding:3px 9px;border-radius:99px;background:#EEF2FF;color:#3450F0;white-space:nowrap}
-.s3 .s3-bar{flex:1;height:6px;border-radius:6px;background:#E4EAFB;overflow:hidden}.s3 .s3-bar u{display:block;width:80%;height:100%;background:#3450F0;border-radius:6px}
-@media(max-width:860px){.s3{margin:16px 8px 40px;border-radius:20px;padding:28px 22px}.s3 .s3-g{grid-template-columns:1fr;gap:28px}.s3 .s3-i:after{display:none}}
-</style><div class="s3-g"><div class="s3-i"><div class="s3-h"><span class="s3-n">1</span><span><b>Upload your content</b><span>Policies, documents, videos</span></span></div><div class="s3-c"><i>&#9636;</i>Data protection policy<em>Uploaded</em></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">2</span><span><b>Build the training</b><span>Lessons, scenarios, quizzes</span></span></div><div class="s3-c"><i>&#10022;</i>Building course<span class="s3-bar"><u></u></span><em>80%</em></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">3</span><span><b>Assign and track</b><span>Reminders and records handled</span></span></div><div class="s3-c"><i>&#128101;</i>3 teams assigned<em>Reminders on</em></div></div></div></section>
+.s3 .s3-h span span{display:block;margin-top:2px;font-size:14px;color:rgba(255,255,255,.78)}
+.s3[data-v="2"] .s3-h span span,.s3[data-v="3"] .s3-h span span{color:#4A4D6E}
+.s3 .s3-c{margin-top:22px;background:#fff;color:#151433;border-radius:18px;padding:18px;display:flex;align-items:center;gap:14px;box-shadow:0 26px 40px -24px rgba(11,12,38,.6);min-height:92px}
+.s3[data-v="2"] .s3-c{background:#F5F7FC;box-shadow:none;border:1px solid #E3E8F5}
+.s3 .s3-c small{display:block;margin-top:3px;font-size:12px;font-weight:500;color:#6A6E8E}
+.s3 .s3-c b{font-size:14px;font-weight:650;display:block}
+.s3 .s3-pdf{flex:none;width:44px;height:52px;border-radius:8px;background:linear-gradient(160deg,#4C68FF,#2A3FD0);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:end center;padding-bottom:7px;position:relative}
+.s3 .s3-pdf:before{content:"";position:absolute;top:0;right:0;width:14px;height:14px;background:rgba(255,255,255,.35);border-radius:0 8px 0 8px}
+.s3 .s3-ring{flex:none;width:52px;height:52px;border-radius:50%;background:conic-gradient(#3450F0 0 80%,#E4EAFB 0);display:grid;place-items:center;position:relative}
+.s3 .s3-ring:before{content:"";position:absolute;inset:6px;border-radius:50%;background:#fff}
+.s3[data-v="2"] .s3-ring:before{background:#F5F7FC}
+.s3 .s3-ring i{position:relative;font-style:normal;font-size:12px;font-weight:700;color:#3450F0}
+.s3 .s3-av{flex:none;display:flex}
+.s3 .s3-av i{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-6px;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:700;color:#fff}
+.s3[data-v="2"] .s3-av i{border-color:#F5F7FC}
+.s3 .s3-av i:first-child{margin-left:0;background:#3450F0}.s3 .s3-av i:nth-child(2){background:#151433}.s3 .s3-av i:nth-child(3){background:#7F93FF}
+.s3 .s3-sw{margin-left:auto;flex:none;width:36px;height:20px;border-radius:20px;background:#3450F0;position:relative}.s3 .s3-sw:after{content:"";position:absolute;top:3px;right:3px;width:14px;height:14px;border-radius:50%;background:#fff}
+@media(max-width:860px){.s3{margin:16px 8px 40px}.s3 .s3-b{border-radius:20px;padding:28px 22px}.s3 .s3-g{grid-template-columns:1fr;gap:28px}.s3 .s3-i:after{display:none}}
+</style><div class="s3-t"><button class="on" data-v="1">Deep blue</button><button data-v="2">White</button><button data-v="3">Pale blue</button></div><div class="s3-b"><div class="s3-g"><div class="s3-i"><div class="s3-h"><span class="s3-n">1</span><span><b>Upload your content</b><span>Policies, documents, videos</span></span></div><div class="s3-c"><span class="s3-pdf">PDF</span><span><b>Data protection policy</b><small>2.4 MB &middot; Uploaded</small></span></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">2</span><span><b>Build the training</b><span>Lessons, scenarios, quizzes</span></span></div><div class="s3-c"><span class="s3-ring"><i>80%</i></span><span><b>Building your course</b><small>5 lessons &middot; 2 quizzes</small></span></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">3</span><span><b>Assign and track</b><span>Reminders and records handled</span></span></div><div class="s3-c"><span class="s3-av"><i>SM</i><i>JT</i><i>PK</i></span><span><b>3 teams assigned</b><small>Reminders on</small></span><span class="s3-sw"></span></div></div></div></div><script>(function(){var r=document.querySelector('.s3');if(!r)return;var b=[].slice.call(r.querySelectorAll('.s3-t button'));b.forEach(function(x){x.addEventListener('click',function(){r.setAttribute('data-v',x.getAttribute('data-v'));b.forEach(function(y){y.classList.toggle('on',y===x)})})})})();</script></section>
 <section data-n="5" id="help">
 <div class="wrap">
 <div class="head">
