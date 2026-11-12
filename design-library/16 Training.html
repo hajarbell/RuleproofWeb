@@ -2808,15 +2808,21 @@ section.tr-hero .tr-vis{display:block!important;margin:0!important;padding:0!imp
 <!-- 05 HOW CAN RULEPROOF HELP · rail + panel -->
 
 <section class="s3" aria-label="How it works"><style>
-.s3{max-width:1320px;margin:24px auto 56px;padding:0}
+.s3{max-width:1320px;margin:24px auto 56px;border-radius:28px;padding:40px 44px 44px;color:#fff;overflow:hidden;position:relative;background:radial-gradient(ellipse 50% 90% at 100% 0%,rgba(255,255,255,.22),transparent 70%),radial-gradient(ellipse 40% 70% at 0% 100%,rgba(21,20,51,.28),transparent 70%),linear-gradient(135deg,#3450F0,#4C68FF)}
 @media(max-width:1352px){.s3{margin:24px 16px 56px}}
-.s3 .s3-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.s3 .s3-i{display:flex;align-items:center;gap:16px;padding:26px 30px;border-radius:24px;background:#fff;border:1px solid #E3E8F5;box-shadow:0 22px 40px -28px rgba(52,80,240,.35)}
-.s3 .s3-n{flex:none;width:46px;height:46px;border-radius:50%;background:#3450F0;color:#fff;display:grid;place-items:center;font-size:18px;font-weight:650}
-.s3 .s3-i b{display:block;font-size:18px;font-weight:650;color:#151433;letter-spacing:-.01em}
-.s3 .s3-i span span{display:block;margin-top:2px;font-size:14px;color:#4A4D6E}
-@media(max-width:860px){.s3{margin:16px 8px 40px}.s3 .s3-g{grid-template-columns:1fr;gap:10px}.s3 .s3-i{padding:20px 22px;border-radius:20px}}
-</style><div class="s3-g"><div class="s3-i"><span class="s3-n">1</span><span><b>Upload your content</b><span>Policies, documents, videos</span></span></div><div class="s3-i"><span class="s3-n">2</span><span><b>Build the training</b><span>Lessons, scenarios, quizzes</span></span></div><div class="s3-i"><span class="s3-n">3</span><span><b>Assign and track</b><span>Reminders and records handled</span></span></div></div></section>
+.s3 .s3-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;max-width:1080px;margin:0 auto;position:relative}
+.s3 .s3-i{position:relative}
+.s3 .s3-i:not(:last-child):after{content:"";position:absolute;top:22px;left:calc(100% - 4px);width:48px;border-top:2px dashed rgba(255,255,255,.45)}
+.s3 .s3-h{display:flex;align-items:center;gap:14px}
+.s3 .s3-n{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;color:#3450F0;display:grid;place-items:center;font-size:19px;font-weight:700}
+.s3 .s3-h b{display:block;font-size:20px;font-weight:650;letter-spacing:-.01em}
+.s3 .s3-h span span{display:block;margin-top:2px;font-size:14px;color:rgba(255,255,255,.8)}
+.s3 .s3-c{margin-top:20px;background:#fff;color:#151433;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;box-shadow:0 22px 34px -20px rgba(11,12,38,.7)}
+.s3 .s3-c i{flex:none;width:32px;height:32px;border-radius:9px;background:#EEF2FF;color:#3450F0;display:grid;place-items:center;font-style:normal;font-size:15px}
+.s3 .s3-c em{margin-left:auto;font-style:normal;font-size:11px;font-weight:650;padding:3px 9px;border-radius:99px;background:#EEF2FF;color:#3450F0;white-space:nowrap}
+.s3 .s3-bar{flex:1;height:6px;border-radius:6px;background:#E4EAFB;overflow:hidden}.s3 .s3-bar u{display:block;width:80%;height:100%;background:#3450F0;border-radius:6px}
+@media(max-width:860px){.s3{margin:16px 8px 40px;border-radius:20px;padding:28px 22px}.s3 .s3-g{grid-template-columns:1fr;gap:28px}.s3 .s3-i:after{display:none}}
+</style><div class="s3-g"><div class="s3-i"><div class="s3-h"><span class="s3-n">1</span><span><b>Upload your content</b><span>Policies, documents, videos</span></span></div><div class="s3-c"><i>&#9636;</i>Data protection policy<em>Uploaded</em></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">2</span><span><b>Build the training</b><span>Lessons, scenarios, quizzes</span></span></div><div class="s3-c"><i>&#10022;</i>Building course<span class="s3-bar"><u></u></span><em>80%</em></div></div><div class="s3-i"><div class="s3-h"><span class="s3-n">3</span><span><b>Assign and track</b><span>Reminders and records handled</span></span></div><div class="s3-c"><i>&#128101;</i>3 teams assigned<em>Reminders on</em></div></div></div></section>
 <section data-n="5" id="help">
 <div class="wrap">
 <div class="head">
@@ -2983,7 +2989,7 @@ body .proof2.pf3.pf3[data-n]{max-width:none;width:auto;margin:0!important;border
 <div class="ap-app" id="apApp">
 <div class="ap-top"><div><b>Audit packs</b><small>Generate and download device-local audit evidence packs.</small></div><button type="button" class="ap-dark" id="apGen" tabindex="-1">Generate pack</button></div>
 <div class="ap-card"><div class="ap-h">Generated packs</div><div class="ap-th"><span>Scope</span><span>Date range</span><span>Status</span><span>Created</span><span>Actions</span></div><div id="apRows"><div class="ap-tr"><span>Meridian Financial Group</span><span>01.10.2026 – 09.11.2026</span><span>Ready</span><span>09.11.2026</span><span><i class="ap-btn">Download</i></span></div></div></div>
-<div class="ap-card ap-auto"><div class="ap-h">Automatic generation</div><p>Schedule preferences are local; no background generation service is connected.</p><div class="ap-row"><b>Enable scheduled generation</b><i class="ap-tg" id="apTg"></i></div><div class="ap-row"><b>Frequency</b><i class="ap-sel">Monthly on the 1st</i></div><div class="ap-row ap-next" id="apNext"><b>Next pack</b><span><i class="ap-calc"></i>01.12.2026 · runs automatically</span></div><div class="ap-save"><i class="ap-dark" id="apSave">Save</i></div></div>
+<div class="ap-card ap-auto"><div class="ap-h">Automatic generation</div><p>Schedule preferences are local; no background generation service is connected.</p><div class="ap-row"><b>Enable scheduled generation</b><i class="ap-tg" id="apTg"></i></div><div class="ap-row"><b>Frequency</b><i class="ap-sel">Monthly on the 1st</i></div><div class="ap-row ap-next" id="apNext"><b>Next pack</b><span><i class="ap-calc"></i>01.12.2026 · runs automatically</span></div><div class="ap-save"><i class="ap-dark ap-sw" id="apSave"><span class="a">Save</span><span class="b">Saved</span></i></div></div>
 </div>
 <div class="ap-ov" id="apOv"><div class="ap-modal"><div class="ap-mh"><b>Generate pack</b><i class="ap-x">×</i></div><div class="ap-mb"><div class="ap-dates"><div><small>Start date</small><i id="apS" class="ap-in"></i></div><div><small>End date</small><i class="ap-in">11.11.2026</i></div></div><p>Includes controls, certifications, completion records, and governance decisions.</p></div><div class="ap-mf"><i class="ap-btn">Cancel</i><i class="ap-dark" id="apOk">Generate</i></div></div></div>
 <i class="ap-rip" id="apRip"></i>
@@ -3374,11 +3380,33 @@ opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.23,1,.32,1),t
 .ap-toast{top:auto!important;bottom:24px!important;transform:translate(-50%,10px) scale(.96)!important}
 .ap-toast.on{transform:translate(-50%,0)!important}
 @media(max-width:640px){.ap-steps button span{display:none}.ap-note{max-width:78%}}
-.ap-note,.ap-toast{display:none!important}
+/* smooth label swaps (no text jumps, no wrapping) */
+.ap-th,.ap-tr{grid-template-columns:1.4fr 1.4fr .8fr .8fr 1.05fr!important}
+.ap-btn,.ap-dark{white-space:nowrap}
+.ap-btn{transition:background .35s cubic-bezier(.23,1,.32,1),border-color .35s,color .35s,transform .15s cubic-bezier(.23,1,.32,1)}
+.ap-dark{transition:background .35s cubic-bezier(.23,1,.32,1),transform .15s cubic-bezier(.23,1,.32,1)}
+.ap-sw{display:inline-grid!important}
+.ap-sw>span{grid-area:1/1;text-align:center;display:inline-flex;align-items:center;justify-content:center;transition:opacity .4s cubic-bezier(.23,1,.32,1),transform .4s cubic-bezier(.23,1,.32,1)}
+.ap-sw>.b{opacity:0;transform:translateY(7px)}
+.ap-sw.ap-ok>.a,.ap-sw.ap-saved>.a{opacity:0;transform:translateY(-7px)}
+.ap-sw.ap-ok>.b,.ap-sw.ap-saved>.b{opacity:1;transform:none}
+.ap-sw>.b::before{content:"";flex:none;width:5px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);margin-right:9px}
 .ap-btn.ap-ok{background:#EEF2FF;border-color:#C7D2FF;color:#3450F0}
-.ap-btn.ap-ok::before{content:"";display:inline-block;width:5px;height:9px;border-right:2px solid #3450F0;border-bottom:2px solid #3450F0;transform:rotate(45deg);margin:0 8px 2px 1px}
 .ap-dark.ap-saved{background:#3450F0}
-.ap-dark.ap-saved::before{content:"";display:inline-block;width:5px;height:9px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);margin:0 8px 2px 1px}
+.ap-swp{display:inline-grid}
+.ap-swp>*{grid-area:1/1;transition:opacity .45s cubic-bezier(.23,1,.32,1),transform .45s cubic-bezier(.23,1,.32,1)}
+.ap-swp>.b{opacity:0;transform:translateY(6px)}
+.ap-swp.ap-ready>.a{opacity:0;transform:translateY(-6px)}
+.ap-swp.ap-ready>.b{opacity:1;transform:none}
+.ap-in{transition:border-color .3s,box-shadow .3s}
+.ap-tr{transition:background .5s}
+/* consistency audit: every table button identical, modal buttons equal height */
+.ap-tr .ap-btn{box-sizing:border-box;width:116px;height:34px;padding:0 12px!important;display:inline-flex!important;align-items:center;justify-content:center;border-radius:10px;font-size:13px;font-weight:600;line-height:1}
+.ap-tr .ap-btn.ap-sw{display:inline-grid!important;place-items:center}
+.ap-mf .ap-btn,.ap-mf .ap-dark{box-sizing:border-box;height:42px;padding:0 20px!important;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;font-size:14px;font-weight:600;line-height:1}
+.ap-top .ap-dark,.ap-save .ap-dark{box-sizing:border-box;height:42px;padding:0 20px!important;display:inline-flex;align-items:center;justify-content:center;font-size:14px;line-height:1}
+.ap-save .ap-dark.ap-sw{display:inline-grid;place-items:center}
+.ap-note,.ap-toast{display:none!important}
 </style>
 <script>(function(){var l=document.querySelector(".lv1");if(!l)return;if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;l.classList.add("js");if(!("IntersectionObserver" in window)){l.classList.add("go");return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){l.classList.add("go");io.disconnect()}},{threshold:.35});io.observe(l)})()</script>
 
@@ -3844,22 +3872,22 @@ function zoom(el,z,fx,fy){var p=pos(el),px=p.x+p.w*(fx==null?.5:fx),py=p.y+p.h*(
 function unzoom(){cam.style.transform="translate(0,0) scale(1)"}
 function toast(t,ms){tbt.textContent=t;tb.classList.add("on");later(function(){tb.classList.remove("on")},ms||1900)}
 function showNote(n){noteN.textContent=n+1;noteT.textContent=titles[n];noteS.textContent=subs[n];note.classList.add("on");later(function(){note.classList.remove("on")},DUR[n]*1000-900)}
-function rowHTML(state,auto){var status=state==="gen"?'<span class="ap-st"><span class="ap-bar2"><i></i></span>Generating</span>':'Ready';return '<div class="ap-tr new"><span>Meridian Financial Group'+(auto?'<i class="ap-tag">Auto</i>':'')+'</span><span>'+(auto?'01.11.2026 \u2013 30.11.2026':'03.09.2026 \u2013 11.11.2026')+'</span><span class="ap-s">'+status+'</span><span>'+(auto?'01.12.2026':'11.11.2026')+'</span><span><i class="ap-btn" id="apDl">Download</i></span></div>'}
+function rowHTML(state,auto){var status=state==="gen"?'<span class="ap-swp"><span class="a ap-st"><span class="ap-bar2"><i></i></span>Generating</span><span class="b">Ready</span></span>':'Ready';return '<div class="ap-tr new"><span>Meridian Financial Group'+(auto?'<i class="ap-tag">Auto</i>':'')+'</span><span>'+(auto?'01.11.2026 \u2013 30.11.2026':'03.09.2026 \u2013 11.11.2026')+'</span><span class="ap-s">'+status+'</span><span>'+(auto?'01.12.2026':'11.11.2026')+'</span><span><i class="ap-btn ap-sw" id="apDl"><span class="a">Download</span><span class="b">Downloaded</span></i></span></div>'}
 function scrollTo2(down){sy=down?-Math.max(0,app.scrollHeight-cam.clientHeight):0;app.style.transform="translateY("+sy+"px)"}
-function reset(n){sv.textContent="Save";sv.classList.remove("ap-saved");app.style.transition="none";sy=0;app.style.transform="translateY(0)";void app.offsetWidth;app.style.transition="";cam.style.transition="none";cam.style.transform="translate(0,0) scale(1)";void cam.offsetWidth;cam.style.transition="";tg.classList.remove("on");nx.classList.remove("on");inS.textContent="";inS.classList.remove("type");tb.classList.remove("on");note.classList.remove("on");rows.innerHTML=(n>=2?rowHTML("ready").replace(" new",""):"")+OLD;ov.classList.toggle("on",n===1&&!rm);if(n!==1)ov.classList.remove("on");cur.style.transition="none";cur.style.opacity=0;cur.style.transform="translate(780px,310px)";void cur.offsetWidth;cur.style.transition=""}
+function reset(n){sv.classList.remove("ap-saved");app.style.transition="none";sy=0;app.style.transform="translateY(0)";void app.offsetWidth;app.style.transition="";cam.style.transition="none";cam.style.transform="translate(0,0) scale(1)";void cam.offsetWidth;cam.style.transition="";tg.classList.remove("on");nx.classList.remove("on");inS.textContent="";inS.classList.remove("type");tb.classList.remove("on");note.classList.remove("on");rows.innerHTML=(n>=2?rowHTML("ready").replace(" new",""):"")+OLD;ov.classList.toggle("on",n===1&&!rm);if(n!==1)ov.classList.remove("on");cur.style.transition="none";cur.style.opacity=0;cur.style.transform="translate(780px,310px)";void cur.offsetWidth;cur.style.transition=""}
 function final(n){reset(n);if(n===1){ov.classList.add("on");inS.textContent="03.09.2026"}if(n===3){scrollTo2(true);tg.classList.add("on");nx.classList.add("on")}note.classList.add("on");noteN.textContent=n+1;noteT.textContent=titles[n];noteS.textContent=subs[n]}
 function type(txt,i){if(i>txt.length){inS.classList.remove("type");return}inS.textContent=txt.slice(0,i);later(function(){type(txt,i+1)},80)}
 function setFill(n){ap.style.setProperty("--from",n/4);ap.style.setProperty("--to",(n+1)/4);ap.style.setProperty("--dur",DUR[n]+"s")}
 function play(n){clear();step=n;tabs.forEach(function(t,i){t.setAttribute("aria-selected",i===n);t.classList.toggle("done",i<n)});ap.classList.remove("run");setFill(n);if(rm||!live){fill.style.transform="scaleX("+((n+1)/4)+")";final(n);return}fill.style.transform="";void ap.offsetWidth;ap.classList.add("run");reset(n);var g=$("apGen");showNote(n);
 if(n===0){later(function(){to(g)},900);later(function(){zoom(g,1.1,.7,.4)},1600);later(function(){click(g)},3000);later(function(){ov.classList.add("on")},3250);later(unzoom,4400)}
-if(n===1){later(function(){to(inS,.3,.6)},700);later(function(){zoom(inS,1.1,.8,.5)},1300);later(function(){inS.classList.add("type");type("03.09.2026",1)},2200);later(function(){to($("apOk"))},3900);later(function(){zoom($("apOk"),1.1,.2,.4)},4000);later(function(){click($("apOk"))},5300);later(function(){ov.classList.remove("on");unzoom()},5600);later(function(){rows.insertAdjacentHTML("afterbegin",rowHTML("gen"))},6300);later(function(){var r=rows.firstChild.querySelector(".ap-s");r.textContent="Ready"},8000)}
-if(n===2){later(function(){to($("apDl"))},800);later(function(){zoom($("apDl"),1.08,.7,.4)},800);later(function(){var d=$("apDl");click(d);d.textContent="Downloaded";d.classList.add("ap-ok")},2400);later(function(){toast("Audit pack saved")},2600);later(unzoom,4600)}
-if(n===3){later(function(){scrollTo2(true)},700);later(function(){to(tg,.5,.5);zoom(tg,1.08,.5,.5)},2000);later(function(){click(tg);tg.classList.add("on");nx.classList.add("on")},3300);later(function(){to($("apSave"));zoom($("apSave"),1.08,.5,.5)},4300);later(function(){click(sv);sv.textContent="Saved";sv.classList.add("ap-saved")},5500);later(function(){unzoom();scrollTo2(false)},6800);later(function(){rows.insertAdjacentHTML("afterbegin",rowHTML("ready",true))},8000);later(function(){toast("Audit pack ready on time",1700)},8400)}}
+if(n===1){later(function(){to(inS,.3,.6)},700);later(function(){zoom(inS,1.1,.8,.5)},1300);later(function(){inS.classList.add("type");type("03.09.2026",1)},2200);later(function(){to($("apOk"))},3900);later(function(){zoom($("apOk"),1.1,.2,.4)},4000);later(function(){click($("apOk"))},5300);later(function(){ov.classList.remove("on");unzoom()},5600);later(function(){rows.insertAdjacentHTML("afterbegin",rowHTML("gen"))},6300);later(function(){rows.firstChild.querySelector(".ap-swp").classList.add("ap-ready")},8000)}
+if(n===2){later(function(){to($("apDl"))},800);later(function(){zoom($("apDl"),1.08,.7,.4)},800);later(function(){var d=$("apDl");click(d);d.classList.add("ap-ok")},2400);later(function(){toast("Audit pack saved")},2600);later(unzoom,4600)}
+if(n===3){later(function(){scrollTo2(true)},700);later(function(){to(tg,.5,.5);zoom(tg,1.08,.5,.5)},2000);later(function(){click(tg);tg.classList.add("on");nx.classList.add("on")},3300);later(function(){to($("apSave"));zoom($("apSave"),1.08,.5,.5)},4300);later(function(){click(sv);sv.classList.add("ap-saved")},5500);later(function(){unzoom();scrollTo2(false)},6800);later(function(){rows.insertAdjacentHTML("afterbegin",rowHTML("ready",true))},8000);later(function(){toast("Audit pack ready on time",1700)},8400)}}
 function advance(){play((step+1)%4)}
 ap.addEventListener("animationend",function(e){if(e.animationName==="ap-fill")advance()});
 tabs.forEach(function(t,i){t.addEventListener("click",function(){live=true;play(i)})});
 play(0);
-if("IntersectionObserver"in window&&!rm){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){live=true;play(0)}else{live=false;clear();ap.classList.remove("run")}},{threshold:.12});io.observe(ap)}
+if("IntersectionObserver"in window&&!rm){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){if(!live){live=true;play(0)}}else{live=false;clear();ap.classList.remove("run")}},{threshold:.12});io.observe(ap)}
 })();</script>
 
 </body>
